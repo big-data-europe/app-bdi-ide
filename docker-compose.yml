@@ -1,0 +1,60 @@
+version: "2"
+services:
+  stack-builder:
+    image: bde2020/ember-stack-builder-frontend:0.2.3
+    ports:
+      - 13337:80
+    links:
+      - identifier:backend
+  pipeline-builder:
+    image: bde2020/pipeline-builder-frontend:0.4.2
+    links:
+      - identifier:backend
+    ports:
+      - 13338:80
+  swarm-ui:
+    image: bde2020/ember-swarm-ui-frontend:0.4.3
+    ports:
+      - 13339:80
+    links:
+      - identifier:backend
+  integrator-ui:
+    build: ./integrator-ui
+    ports:
+      - 80:80
+  identifier:
+    image: semtech/mu-identifier:1.2.0
+  dispatcher:
+    image: semtech/mu-dispatcher:1.1.0
+    volumes:
+      - ./config/dispatcher:/config
+  database:
+    image: tenforce/virtuoso:1.1.0-virtuoso7.2.4
+    environment:
+      SPARQL_UPDATE: "true"
+      DEFAULT_GRAPH: "http://mu.semte.ch/application"
+    ports:
+      - "8890:8890"
+    volumes:
+      - ./data/db:/data
+  resource:
+    image: semtech/mu-cl-resources
+    volumes:
+      - ./config/resources:/config
+  backend:
+    image: bde2020/mu-docker-compose-file-service:0.1.0
+  migrationsservice:
+      image: semtech/mu-migrations-service
+      volumes:
+        - ./config/migrations:/data/migrations
+  pipeline:
+    image: bde2020/mu-pipeline-service:0.1.0
+  export:
+    image: bde2020/mu-pipeline-export-service:0.1.0
+  swarm:
+    image: bde2020/mu-swarm-admin-service
+    environment:
+      ENV: "dev"
+    volumes:
+      - /run/:/run/
+      - /data/:/data/

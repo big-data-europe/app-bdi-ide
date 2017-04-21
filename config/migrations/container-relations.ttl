@@ -1,0 +1,116 @@
+@base <> .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1:	<http://stackbuilder.semte.ch/vocabularies/core/> .
+@prefix ns2:	<http://mu.semte.ch/vocabularies/core/> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/680f2266-3b0a-4fdf-86e2-04af306ade87>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/680f2266-3b0a-4fdf-86e2-04af306ade87>	ns2:uuid	"680f2266-3b0a-4fdf-86e2-04af306ade87" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/680f2266-3b0a-4fdf-86e2-04af306ade87>	ns1:index "1" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/680f2266-3b0a-4fdf-86e2-04af306ade87>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/8e603a7d-b082-4762-8602-82cf1e1e0182> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/680f2266-3b0a-4fdf-86e2-04af306ade87>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/e641937c-4660-48ca-afa5-5cdb1f34b2f1> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/24b096b6-0e0b-48c0-9546-77f69848e576>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/24b096b6-0e0b-48c0-9546-77f69848e576>	ns2:uuid	"24b096b6-0e0b-48c0-9546-77f69848e576" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/24b096b6-0e0b-48c0-9546-77f69848e576>	ns1:index "2" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/24b096b6-0e0b-48c0-9546-77f69848e576>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/8e603a7d-b082-4762-8602-82cf1e1e0182> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/24b096b6-0e0b-48c0-9546-77f69848e576>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/e31b7a71-5b29-45a4-ba72-04eb7e3433e0> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/41dcb370-fc1a-4f24-ad1d-7dea7204bb11>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/41dcb370-fc1a-4f24-ad1d-7dea7204bb11>	ns2:uuid	"41dcb370-fc1a-4f24-ad1d-7dea7204bb11" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/41dcb370-fc1a-4f24-ad1d-7dea7204bb11>	ns1:index "3" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/41dcb370-fc1a-4f24-ad1d-7dea7204bb11>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/8e603a7d-b082-4762-8602-82cf1e1e0182> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/41dcb370-fc1a-4f24-ad1d-7dea7204bb11>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/fa2df87c-2936-4019-8071-c6012786698c> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/a54062ff-b2e8-4125-a4eb-e9b23a937be0>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/a54062ff-b2e8-4125-a4eb-e9b23a937be0>	ns2:uuid	"a54062ff-b2e8-4125-a4eb-e9b23a937be0" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/a54062ff-b2e8-4125-a4eb-e9b23a937be0>	ns1:index "1" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/a54062ff-b2e8-4125-a4eb-e9b23a937be0>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/ff4bb008-b699-400f-83df-ab4373dbf337> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/a54062ff-b2e8-4125-a4eb-e9b23a937be0>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/e641937c-4660-48ca-afa5-5cdb1f34b2f1> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/85965396-c498-4f44-a039-12055e99c6ed>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/85965396-c498-4f44-a039-12055e99c6ed>	ns2:uuid	"85965396-c498-4f44-a039-12055e99c6ed" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/85965396-c498-4f44-a039-12055e99c6ed>	ns1:index "2" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/85965396-c498-4f44-a039-12055e99c6ed>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/ff4bb008-b699-400f-83df-ab4373dbf337> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/85965396-c498-4f44-a039-12055e99c6ed>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/e31b7a71-5b29-45a4-ba72-04eb7e3433e0> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/ad2ccf88-3c5b-4c15-9cae-036e75fad8e3>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/ad2ccf88-3c5b-4c15-9cae-036e75fad8e3>	ns2:uuid	"ad2ccf88-3c5b-4c15-9cae-036e75fad8e3" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/ad2ccf88-3c5b-4c15-9cae-036e75fad8e3>	ns1:index "3" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/ad2ccf88-3c5b-4c15-9cae-036e75fad8e3>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/ff4bb008-b699-400f-83df-ab4373dbf337> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/ad2ccf88-3c5b-4c15-9cae-036e75fad8e3>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/1f68672c-d31b-4222-8b30-9d4f5747e393> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/a404db8c-58a4-4d0e-879b-d71f9fb993f7>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/a404db8c-58a4-4d0e-879b-d71f9fb993f7>	ns2:uuid	"a404db8c-58a4-4d0e-879b-d71f9fb993f7" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/a404db8c-58a4-4d0e-879b-d71f9fb993f7>	ns1:index "1" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/a404db8c-58a4-4d0e-879b-d71f9fb993f7>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/43f3ce0d-30ae-4afe-ae37-c66b1ad58153> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/a404db8c-58a4-4d0e-879b-d71f9fb993f7>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/1403198e-46d7-488f-921c-bce5af53bdde> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/d8257fd3-87ed-4bba-a9a9-fe956ba00558>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/d8257fd3-87ed-4bba-a9a9-fe956ba00558>	ns2:uuid	"d8257fd3-87ed-4bba-a9a9-fe956ba00558" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/d8257fd3-87ed-4bba-a9a9-fe956ba00558>	ns1:index "2" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/d8257fd3-87ed-4bba-a9a9-fe956ba00558>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/43f3ce0d-30ae-4afe-ae37-c66b1ad58153> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/d8257fd3-87ed-4bba-a9a9-fe956ba00558>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/021a48e5-324d-4533-84b0-ef1434d17d2d> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/687ced4d-4ef6-4d2e-bfa5-7a8b0dbf0e38>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/687ced4d-4ef6-4d2e-bfa5-7a8b0dbf0e38>	ns2:uuid	"687ced4d-4ef6-4d2e-bfa5-7a8b0dbf0e38" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/687ced4d-4ef6-4d2e-bfa5-7a8b0dbf0e38>	ns1:index "1" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/687ced4d-4ef6-4d2e-bfa5-7a8b0dbf0e38>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/9a3b090e-c157-4ca8-be13-2e85c23b19a7> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/687ced4d-4ef6-4d2e-bfa5-7a8b0dbf0e38>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/dc9fab6e-65c7-4707-9396-801a789474c7> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/9ef079a6-ce00-46d0-8113-5bcfd6b4dc30>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/9ef079a6-ce00-46d0-8113-5bcfd6b4dc30>	ns2:uuid	"9ef079a6-ce00-46d0-8113-5bcfd6b4dc30" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/9ef079a6-ce00-46d0-8113-5bcfd6b4dc30>	ns1:index "2" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/9ef079a6-ce00-46d0-8113-5bcfd6b4dc30>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/9a3b090e-c157-4ca8-be13-2e85c23b19a7> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/9ef079a6-ce00-46d0-8113-5bcfd6b4dc30>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/0835e47a-d70e-44e6-8b6a-64b53c921566> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/63f3059e-85a6-483b-bbd9-bc8a1d3da612>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/63f3059e-85a6-483b-bbd9-bc8a1d3da612>	ns2:uuid	"63f3059e-85a6-483b-bbd9-bc8a1d3da612" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/63f3059e-85a6-483b-bbd9-bc8a1d3da612>	ns1:index "3" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/63f3059e-85a6-483b-bbd9-bc8a1d3da612>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/9a3b090e-c157-4ca8-be13-2e85c23b19a7> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/63f3059e-85a6-483b-bbd9-bc8a1d3da612>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/cc891837-b4fa-41bb-b46e-fc1cd1fdd1b9> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/87715175-8a39-4da0-b1df-6f76b2ea2dbf>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/87715175-8a39-4da0-b1df-6f76b2ea2dbf>	ns2:uuid	"87715175-8a39-4da0-b1df-6f76b2ea2dbf" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/87715175-8a39-4da0-b1df-6f76b2ea2dbf>	ns1:index "4" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/87715175-8a39-4da0-b1df-6f76b2ea2dbf>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/9a3b090e-c157-4ca8-be13-2e85c23b19a7> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/87715175-8a39-4da0-b1df-6f76b2ea2dbf>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/caec81e6-0b6e-4d13-8078-7248c099ab54> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/9e5ccc36-2734-4a69-9d1f-33b2d913741e>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/9e5ccc36-2734-4a69-9d1f-33b2d913741e>	ns2:uuid	"9e5ccc36-2734-4a69-9d1f-33b2d913741e" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/9e5ccc36-2734-4a69-9d1f-33b2d913741e>	ns1:index "5" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/9e5ccc36-2734-4a69-9d1f-33b2d913741e>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/9a3b090e-c157-4ca8-be13-2e85c23b19a7> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/9e5ccc36-2734-4a69-9d1f-33b2d913741e>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/ca6570b4-66ca-4981-8ba2-175720b6b49e> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/4609b51f-87fa-4305-a466-66056fe2baa2>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/4609b51f-87fa-4305-a466-66056fe2baa2>	ns2:uuid	"4609b51f-87fa-4305-a466-66056fe2baa2" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/4609b51f-87fa-4305-a466-66056fe2baa2>	ns1:index "6" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/4609b51f-87fa-4305-a466-66056fe2baa2>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/9a3b090e-c157-4ca8-be13-2e85c23b19a7> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/4609b51f-87fa-4305-a466-66056fe2baa2>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/e4d3abc3-d740-4fa9-86ed-d7fdbb602be4> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/7f94a9ea-186b-4467-801e-08497fb67508>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/7f94a9ea-186b-4467-801e-08497fb67508>	ns2:uuid	"7f94a9ea-186b-4467-801e-08497fb67508" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/7f94a9ea-186b-4467-801e-08497fb67508>	ns1:index "1" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/7f94a9ea-186b-4467-801e-08497fb67508>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/886ad326-80b8-4125-97e6-ee32f4a76839> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/7f94a9ea-186b-4467-801e-08497fb67508>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/d428e585-ba0b-4ebf-a13b-97e354d312a6> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-relations/348c4fa3-adf6-461f-b722-ac97076e2b2a>	rdf:type	ns1:ContainerRelation .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/348c4fa3-adf6-461f-b722-ac97076e2b2a>	ns2:uuid	"348c4fa3-adf6-461f-b722-ac97076e2b2a" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/348c4fa3-adf6-461f-b722-ac97076e2b2a>	ns1:index "2" .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/348c4fa3-adf6-461f-b722-ac97076e2b2a>	ns1:relatedGroup	<http://stack-builder.big-data-europe.eu/resources/container-groups/886ad326-80b8-4125-97e6-ee32f4a76839> .
+<http://stack-builder.big-data-europe.eu/resources/container-relations/348c4fa3-adf6-461f-b722-ac97076e2b2a>	ns1:relatedContainer	<http://stack-builder.big-data-europe.eu/resources/container-items/fda4a409-cd88-4a66-8fd7-bfc4d5e0c88f> .

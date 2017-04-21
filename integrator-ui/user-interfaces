@@ -1,0 +1,30 @@
+{ "data": [
+  {
+    "id": 1,
+    "type": "user-interfaces",
+    "attributes": {
+      "label": "Stack Builder",
+      "base-url": "http://localhost:13337/",
+      "append-path": ""
+    }
+  },
+  {
+    "id": 2,
+    "type": "user-interfaces",
+    "attributes": {
+      "label": "Pipeline Builder",
+      "base-url": "http://localhost:13338/",
+      "append-path": ""
+    }
+  },
+  {
+    "id": 3,
+    "type": "user-interfaces",
+    "attributes": {
+      "label": "Swarm UI",
+      "base-url": "http://localhost:13339/",
+      "append-path": ""
+    }
+  }
+]
+}

@@ -1,0 +1,26 @@
+@base <> .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1:	<http://stackbuilder.semte.ch/vocabularies/core/> .
+@prefix ns2:	<http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3:	<http://purl.org/dc/terms/> .
+
+
+<http://stack-builder.big-data-europe.eu/resources/container-groups/9a3b090e-c157-4ca8-be13-2e85c23b19a7> rdf:type ns1:ContainerGroup .
+<http://stack-builder.big-data-europe.eu/resources/container-groups/9a3b090e-c157-4ca8-be13-2e85c23b19a7> ns2:uuid "9a3b090e-c157-4ca8-be13-2e85c23b19a7" .
+<http://stack-builder.big-data-europe.eu/resources/container-groups/9a3b090e-c157-4ca8-be13-2e85c23b19a7> ns3:title "hdfs" .
+
+<http://stack-builder.big-data-europe.eu/resources/container-groups/886ad326-80b8-4125-97e6-ee32f4a76839> rdf:type ns1:ContainerGroup .
+<http://stack-builder.big-data-europe.eu/resources/container-groups/886ad326-80b8-4125-97e6-ee32f4a76839> ns2:uuid "886ad326-80b8-4125-97e6-ee32f4a76839" .
+<http://stack-builder.big-data-europe.eu/resources/container-groups/886ad326-80b8-4125-97e6-ee32f4a76839> ns3:title "stack-builder" .
+
+<http://stack-builder.big-data-europe.eu/resources/container-groups/43f3ce0d-30ae-4afe-ae37-c66b1ad58153> rdf:type ns1:ContainerGroup .
+<http://stack-builder.big-data-europe.eu/resources/container-groups/43f3ce0d-30ae-4afe-ae37-c66b1ad58153> ns2:uuid "43f3ce0d-30ae-4afe-ae37-c66b1ad58153" .
+<http://stack-builder.big-data-europe.eu/resources/container-groups/43f3ce0d-30ae-4afe-ae37-c66b1ad58153> ns3:title "flink" .
+
+<http://stack-builder.big-data-europe.eu/resources/container-groups/8e603a7d-b082-4762-8602-82cf1e1e0182> rdf:type ns1:ContainerGroup .
+<http://stack-builder.big-data-europe.eu/resources/container-groups/8e603a7d-b082-4762-8602-82cf1e1e0182> ns2:uuid "8e603a7d-b082-4762-8602-82cf1e1e0182" .
+<http://stack-builder.big-data-europe.eu/resources/container-groups/8e603a7d-b082-4762-8602-82cf1e1e0182> ns3:title "spark-java" .
+
+<http://stack-builder.big-data-europe.eu/resources/container-groups/ff4bb008-b699-400f-83df-ab4373dbf337> rdf:type ns1:ContainerGroup .
+<http://stack-builder.big-data-europe.eu/resources/container-groups/ff4bb008-b699-400f-83df-ab4373dbf337> ns2:uuid "ff4bb008-b699-400f-83df-ab4373dbf337" .
+<http://stack-builder.big-data-europe.eu/resources/container-groups/ff4bb008-b699-400f-83df-ab4373dbf337> ns3:title "spark-python" .
