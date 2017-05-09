@@ -41,3 +41,4 @@
 (add-prefix "mu" "http://mu.semte.ch/vocabularies/core/")
 (add-prefix "dct" "http://purl.org/dc/terms/")
 (add-prefix "stackbuilder" "http://stackbuilder.semte.ch/vocabularies/core/")
+(add-prefix "swarmui" "http://swarmui.semte.ch/vocabularies/core/")

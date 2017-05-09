@@ -6,115 +6,115 @@
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/edeeaf59-91f3-41dc-918a-3d6a80bc8cde>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/edeeaf59-91f3-41dc-918a-3d6a80bc8cde>	ns1:repository	"https://hub.docker.com/r/bde2020/zookeeper/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/edeeaf59-91f3-41dc-918a-3d6a80bc8cde>	ns1:dockerText	"  zookeeper:\n    image: bde2020/zookeeper" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/edeeaf59-91f3-41dc-918a-3d6a80bc8cde>	ns1:dockerText	"    zookeeper:\n      image: bde2020/zookeeper" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/edeeaf59-91f3-41dc-918a-3d6a80bc8cde>	ns2:uuid	"edeeaf59-91f3-41dc-918a-3d6a80bc8cde" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/edeeaf59-91f3-41dc-918a-3d6a80bc8cde>	ns3:title	"bde2020/zookeeper" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/ca6570b4-66ca-4981-8ba2-175720b6b49e>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/ca6570b4-66ca-4981-8ba2-175720b6b49e>	ns1:repository	"https://hub.docker.com/r/bde2020/hadoop-datanode/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/ca6570b4-66ca-4981-8ba2-175720b6b49e>	ns1:dockerText	"  hadoop-datanode:\n    image: bde2020/hadoop-datanode\n    hostname: datanode\n    env_file:\n      - ./config/hadoop/hadoop.env" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/ca6570b4-66ca-4981-8ba2-175720b6b49e>	ns1:dockerText	"    hadoop-datanode:\n      image: bde2020/hadoop-datanode\n      hostname: datanode\n      env_file:\n        - ./config/hadoop/hadoop.env" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/ca6570b4-66ca-4981-8ba2-175720b6b49e>	ns2:uuid	"ca6570b4-66ca-4981-8ba2-175720b6b49e" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/ca6570b4-66ca-4981-8ba2-175720b6b49e>	ns3:title	"bde2020/hadoop-datanode" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/dc9fab6e-65c7-4707-9396-801a789474c7>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/dc9fab6e-65c7-4707-9396-801a789474c7>	ns1:repository	"https://hub.docker.com/r/bde2020/hadoop-namenode/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/dc9fab6e-65c7-4707-9396-801a789474c7>	ns1:dockerText	"  hadoop-namenode:\n    image: bde2020/hadoop-namenode\n    hostname: namenode\n    volumes:\n      - ./data/hadoop/namenode:/hadoop/dfs/name\n    expose:\n      - \"50070\"\n    environment:\n      CLUSTER_NAME: test\n      INIT_DAEMON_STEP: setup_hdfs\n      VIRTUAL_HOST: hdfs-namenode.demo.big-data-europe.local\n    env_file:\n      - ./config/hadoop/hadoop.env" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/dc9fab6e-65c7-4707-9396-801a789474c7>	ns1:dockerText	"    hadoop-namenode:\n      image: bde2020/hadoop-namenode\n      hostname: namenode\n      volumes:\n        - ./data/hadoop/namenode:/hadoop/dfs/name\n      expose:\n        - \"50070\"\n      environment:\n        CLUSTER_NAME: test\n        INIT_DAEMON_STEP: setup_hdfs\n        VIRTUAL_HOST: hdfs-namenode.demo.big-data-europe.local\n      env_file:\n        - ./config/hadoop/hadoop.env" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/dc9fab6e-65c7-4707-9396-801a789474c7>	ns2:uuid	"dc9fab6e-65c7-4707-9396-801a789474c7" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/dc9fab6e-65c7-4707-9396-801a789474c7>	ns3:title	"bde2020/hadoop-namenode" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/e4d3abc3-d740-4fa9-86ed-d7fdbb602be4>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/e4d3abc3-d740-4fa9-86ed-d7fdbb602be4>	ns1:repository	"https://hub.docker.com/r/bde2020/hdfs-filebrowser/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/e4d3abc3-d740-4fa9-86ed-d7fdbb602be4>	ns1:dockerText	"  hdfs-filebrowser:\n    image: bde2020/hdfs-filebrowser\n    hostname: filebrowser\n    environment:\n      NAMENODE_HOST: namenode\n      VIRTUAL_HOST: hue.demo.big-data-europe.local\n      VIRTUAL_PORT: 8088" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/e4d3abc3-d740-4fa9-86ed-d7fdbb602be4>	ns1:dockerText	"    hdfs-filebrowser:\n      image: bde2020/hdfs-filebrowser\n      hostname: filebrowser\n      environment:\n        NAMENODE_HOST: namenode\n        VIRTUAL_HOST: hue.demo.big-data-europe.local\n        VIRTUAL_PORT: 8088" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/e4d3abc3-d740-4fa9-86ed-d7fdbb602be4>	ns2:uuid	"e4d3abc3-d740-4fa9-86ed-d7fdbb602be4" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/e4d3abc3-d740-4fa9-86ed-d7fdbb602be4>	ns3:title	"bde2020/hdfs-filebrowser" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/14cf8a23-c8f9-4541-a89a-95bc51b02792>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/14cf8a23-c8f9-4541-a89a-95bc51b02792>	ns1:repository	"https://hub.docker.com/r/bde2020/hive/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/14cf8a23-c8f9-4541-a89a-95bc51b02792>	ns1:dockerText	"  hive:\n    image: bde2020/hive" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/14cf8a23-c8f9-4541-a89a-95bc51b02792>	ns1:dockerText	"    hive:\n      image: bde2020/hive" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/14cf8a23-c8f9-4541-a89a-95bc51b02792>	ns2:uuid	"14cf8a23-c8f9-4541-a89a-95bc51b02792" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/14cf8a23-c8f9-4541-a89a-95bc51b02792>	ns3:title	"bde2020/hive" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/33f7a133-8df8-467a-8369-d2c9f1ee0376>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/33f7a133-8df8-467a-8369-d2c9f1ee0376>	ns1:repository	"https://hub.docker.com/r/bde2020/hive-metastore-postgresql/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/33f7a133-8df8-467a-8369-d2c9f1ee0376>	ns1:dockerText	"  hive-metastore-postgresql:\n    image: bde2020/hive-metastore-postgresql" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/33f7a133-8df8-467a-8369-d2c9f1ee0376>	ns1:dockerText	"    hive-metastore-postgresql:\n      image: bde2020/hive-metastore-postgresql" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/33f7a133-8df8-467a-8369-d2c9f1ee0376>	ns2:uuid	"33f7a133-8df8-467a-8369-d2c9f1ee0376" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/33f7a133-8df8-467a-8369-d2c9f1ee0376>	ns3:title	"bde2020/hive-metastore-postgresql" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/e641937c-4660-48ca-afa5-5cdb1f34b2f1>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/e641937c-4660-48ca-afa5-5cdb1f34b2f1>	ns1:repository	"https://hub.docker.com/r/bde2020/spark-master/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/e641937c-4660-48ca-afa5-5cdb1f34b2f1>	ns1:dockerText	"  spark-master:\n    image: bde2020/spark-master\n  container_name: spark-master\n  ports:\n    - \"8080:8080\"\n    - \"7077:7077\"\n  environment:\n    - INIT_DAEMON_STEP=setup_spark\n    - \"constraint:node==<yourmasternode>\"" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/e641937c-4660-48ca-afa5-5cdb1f34b2f1>	ns1:dockerText	"    spark-master:\n      image: bde2020/spark-master\n      container_name: spark-master\n      ports:\n        - \"8080:8080\"\n        - \"7077:7077\"\n      environment:\n        - INIT_DAEMON_STEP=setup_spark\n        - \"constraint:node==<yourmasternode>\"" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/e641937c-4660-48ca-afa5-5cdb1f34b2f1>	ns2:uuid	"e641937c-4660-48ca-afa5-5cdb1f34b2f1" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/e641937c-4660-48ca-afa5-5cdb1f34b2f1>	ns3:title	"bde2020/spark-master" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/e31b7a71-5b29-45a4-ba72-04eb7e3433e0>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/e31b7a71-5b29-45a4-ba72-04eb7e3433e0>	ns1:repository	"https://hub.docker.com/r/bde2020/spark-worker/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/e31b7a71-5b29-45a4-ba72-04eb7e3433e0>	ns1:dockerText	"  spark-worker:\n    image: bde2020/spark-worker\n  container_name: spark-worker\n  depends_on:\n    - spark-master\n  ports:\n    - \"8081:8081\"\n  environment:\n    - \"SPARK_MASTER=spark://spark-master:7077\"\n    - \"constraint:node==<yourmasternode>\"" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/e31b7a71-5b29-45a4-ba72-04eb7e3433e0>	ns1:dockerText	"    spark-worker:\n      image: bde2020/spark-worker\n      container_name: spark-worker\n      depends_on:\n        - spark-master\n      ports:\n        - \"8081:8081\"\n      environment:\n        - \"SPARK_MASTER=spark://spark-master:7077\"\n        - \"constraint:node==<yourmasternode>\"" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/e31b7a71-5b29-45a4-ba72-04eb7e3433e0>	ns2:uuid	"e31b7a71-5b29-45a4-ba72-04eb7e3433e0" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/e31b7a71-5b29-45a4-ba72-04eb7e3433e0>	ns3:title	"bde2020/spark-worker" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/d078ecea-5591-484f-8832-f5957f58a525>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d078ecea-5591-484f-8832-f5957f58a525>	ns1:repository	"https://hub.docker.com/r/bde2020/hadoop-base/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/d078ecea-5591-484f-8832-f5957f58a525>	ns1:dockerText	"  hadoop-base:\n    image: bde2020/hadoop-base" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/d078ecea-5591-484f-8832-f5957f58a525>	ns1:dockerText	"    hadoop-base:\n      image: bde2020/hadoop-base" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d078ecea-5591-484f-8832-f5957f58a525>	ns2:uuid	"d078ecea-5591-484f-8832-f5957f58a525" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d078ecea-5591-484f-8832-f5957f58a525>	ns3:title	"bde2020/hadoop-base" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/750024cc-161a-4668-9479-b12acf80b89d>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/750024cc-161a-4668-9479-b12acf80b89d>	ns1:repository	"https://hub.docker.com/r/bde2020/spark-base/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/750024cc-161a-4668-9479-b12acf80b89d>	ns1:dockerText	"  spark-base:\n    image: bde2020/spark-base" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/750024cc-161a-4668-9479-b12acf80b89d>	ns1:dockerText	"    spark-base:\n      image: bde2020/spark-base" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/750024cc-161a-4668-9479-b12acf80b89d>	ns2:uuid	"750024cc-161a-4668-9479-b12acf80b89d" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/750024cc-161a-4668-9479-b12acf80b89d>	ns3:title	"bde2020/spark-base" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/1403198e-46d7-488f-921c-bce5af53bdde>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1403198e-46d7-488f-921c-bce5af53bdde>	ns1:repository	"https://hub.docker.com/r/bde2020/flink-master/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/1403198e-46d7-488f-921c-bce5af53bdde>	ns1:dockerText	"  flink-master:\n    image: bde2020/flink-master\n   hostname: flink-master\n   container_name: flink-master\n   environment:\n      - INIT_DAEMON_STEP=setup_flink\n#     - \"constraint:node==<yourmasternode>\"\n   ports:\n     - \"8080:8080\"\n     - \"8081:8081\"" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/1403198e-46d7-488f-921c-bce5af53bdde>	ns1:dockerText	"    flink-master:\n      image: bde2020/flink-master\n      hostname: flink-master\n      container_name: flink-master\n      environment:\n        - INIT_DAEMON_STEP=setup_flink\n#     - \"constraint:node==<yourmasternode>\"\n      ports:\n       - \"8080:8080\"\n       - \"8081:8081\"" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1403198e-46d7-488f-921c-bce5af53bdde>	ns2:uuid	"1403198e-46d7-488f-921c-bce5af53bdde" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1403198e-46d7-488f-921c-bce5af53bdde>	ns3:title	"bde2020/flink-master" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/0835e47a-d70e-44e6-8b6a-64b53c921566>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/0835e47a-d70e-44e6-8b6a-64b53c921566>	ns1:repository	"https://hub.docker.com/r/bde2020/hadoop-resourcemanager/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/0835e47a-d70e-44e6-8b6a-64b53c921566>	ns1:dockerText	"  hadoop-resourcemanager:\n    image: bde2020/hadoop-resourcemanager\n    hostname: resourcemanager\n    expose:\n      - \"8031\"\n      - \"8088\"\n    environment:\n      VIRTUAL_HOST: hdfs-resourcemanager.demo.big-data-europe.local\n      VIRTUAL_PORT: 8088\n    env_file:\n      - ./config/hadoop/hadoop.env" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/0835e47a-d70e-44e6-8b6a-64b53c921566>	ns1:dockerText	"    hadoop-resourcemanager:\n      image: bde2020/hadoop-resourcemanager\n      hostname: resourcemanager\n      expose:\n        - \"8031\"\n        - \"8088\"\n      environment:\n        VIRTUAL_HOST: hdfs-resourcemanager.demo.big-data-europe.local\n        VIRTUAL_PORT: 8088\n      env_file:\n        - ./config/hadoop/hadoop.env" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/0835e47a-d70e-44e6-8b6a-64b53c921566>	ns2:uuid	"0835e47a-d70e-44e6-8b6a-64b53c921566" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/0835e47a-d70e-44e6-8b6a-64b53c921566>	ns3:title	"bde2020/hadoop-resourcemanager" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/cc891837-b4fa-41bb-b46e-fc1cd1fdd1b9>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/cc891837-b4fa-41bb-b46e-fc1cd1fdd1b9>	ns1:repository	"https://hub.docker.com/r/bde2020/hadoop-historyserver/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/cc891837-b4fa-41bb-b46e-fc1cd1fdd1b9>	ns1:dockerText	"  hadoop-historyserver:\n    image: bde2020/hadoop-historyserver\n    hostname: historyserver\n    volumes:\n      - ./data/hadoop/historyserver:/hadoop/yarn/timeline\n    env_file:\n      - ./config/hadoop/hadoop.env" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/cc891837-b4fa-41bb-b46e-fc1cd1fdd1b9>	ns1:dockerText	"    hadoop-historyserver:\n      image: bde2020/hadoop-historyserver\n      hostname: historyserver\n      volumes:\n        - ./data/hadoop/historyserver:/hadoop/yarn/timeline\n      env_file:\n        - ./config/hadoop/hadoop.env" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/cc891837-b4fa-41bb-b46e-fc1cd1fdd1b9>	ns2:uuid	"cc891837-b4fa-41bb-b46e-fc1cd1fdd1b9" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/cc891837-b4fa-41bb-b46e-fc1cd1fdd1b9>	ns3:title	"bde2020/hadoop-historyserver" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/caec81e6-0b6e-4d13-8078-7248c099ab54>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/caec81e6-0b6e-4d13-8078-7248c099ab54>	ns1:repository	"https://hub.docker.com/r/bde2020/hadoop-nodemanager/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/caec81e6-0b6e-4d13-8078-7248c099ab54>	ns1:dockerText	"  hadoop-nodemanager:\n    image: bde2020/hadoop-nodemanager\n    hostname: nodemanager\n    expose:\n      - \"8042\"\n    environment:\n      VIRTUAL_HOST: hdfs-nodemanager.demo.big-data-europe.local\n    env_file:\n      - ./config/hadoop/hadoop.env" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/caec81e6-0b6e-4d13-8078-7248c099ab54>	ns1:dockerText	"    hadoop-nodemanager:\n      image: bde2020/hadoop-nodemanager\n      hostname: nodemanager\n      expose:\n        - \"8042\"\n      environment:\n        VIRTUAL_HOST: hdfs-nodemanager.demo.big-data-europe.local\n      env_file:\n        - ./config/hadoop/hadoop.env" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/caec81e6-0b6e-4d13-8078-7248c099ab54>	ns2:uuid	"caec81e6-0b6e-4d13-8078-7248c099ab54" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/caec81e6-0b6e-4d13-8078-7248c099ab54>	ns3:title	"bde2020/hadoop-nodemanager" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/8250f069-9025-426a-a359-bee46451e3f4>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/8250f069-9025-426a-a359-bee46451e3f4>	ns1:repository	"https://hub.docker.com/r/bde2020/spark-submit/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/8250f069-9025-426a-a359-bee46451e3f4>	ns1:dockerText	"  spark-submit:\n    image: bde2020/spark-submit" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/8250f069-9025-426a-a359-bee46451e3f4>	ns1:dockerText	"    spark-submit:\n      image: bde2020/spark-submit" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/8250f069-9025-426a-a359-bee46451e3f4>	ns2:uuid	"8250f069-9025-426a-a359-bee46451e3f4" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/8250f069-9025-426a-a359-bee46451e3f4>	ns3:title	"bde2020/spark-submit" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/fa2df87c-2936-4019-8071-c6012786698c>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/fa2df87c-2936-4019-8071-c6012786698c>	ns1:repository	"https://hub.docker.com/r/bde2020/spark-java-template/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/fa2df87c-2936-4019-8071-c6012786698c>	ns1:dockerText	"  spark-java-template:\n    image: bde2020/spark-java-template" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/fa2df87c-2936-4019-8071-c6012786698c>	ns1:dockerText	"    spark-java-template:\n      image: bde2020/spark-java-template" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/fa2df87c-2936-4019-8071-c6012786698c>	ns2:uuid	"fa2df87c-2936-4019-8071-c6012786698c" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/fa2df87c-2936-4019-8071-c6012786698c>	ns3:title	"bde2020/spark-java-template" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/021a48e5-324d-4533-84b0-ef1434d17d2d>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/021a48e5-324d-4533-84b0-ef1434d17d2d>	ns1:repository	"https://hub.docker.com/r/bde2020/flink-worker/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/021a48e5-324d-4533-84b0-ef1434d17d2d>	ns1:dockerText	"  flink-worker:\n    image: bde2020/flink-worker\n   hostname: flink-worker\n   container_name: flink-worker\n   environment:\n     - \"FLINK_MASTER_PORT_6123_TCP_ADDR=flink-master\"\n     - \"constraint:node==<yourworkernode>\"\n   depends_on:\n      - \"flink-master\"" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/021a48e5-324d-4533-84b0-ef1434d17d2d>	ns1:dockerText	"    flink-worker:\n      image: bde2020/flink-worker\n      hostname: flink-worker\n      container_name: flink-worker\n      environment:\n       - \"FLINK_MASTER_PORT_6123_TCP_ADDR=flink-master\"\n       - \"constraint:node==<yourworkernode>\"\n      depends_on:\n        - \"flink-master\"" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/021a48e5-324d-4533-84b0-ef1434d17d2d>	ns2:uuid	"021a48e5-324d-4533-84b0-ef1434d17d2d" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/021a48e5-324d-4533-84b0-ef1434d17d2d>	ns3:title	"bde2020/flink-worker" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/1f3eb53b-e889-449c-b1d1-291948c46cc6>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1f3eb53b-e889-449c-b1d1-291948c46cc6>	ns1:repository	"https://hub.docker.com/r/bde2020/flink-maven-template/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/1f3eb53b-e889-449c-b1d1-291948c46cc6>	ns1:dockerText	"  flink-maven-template:\n    image: bde2020/flink-maven-template" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/1f3eb53b-e889-449c-b1d1-291948c46cc6>	ns1:dockerText	"    flink-maven-template:\n      image: bde2020/flink-maven-template" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1f3eb53b-e889-449c-b1d1-291948c46cc6>	ns2:uuid	"1f3eb53b-e889-449c-b1d1-291948c46cc6" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1f3eb53b-e889-449c-b1d1-291948c46cc6>	ns3:title	"bde2020/flink-maven-template" .
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/1e8586ea-ec45-47ea-82c9-d2ffa3bbafcf>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1e8586ea-ec45-47ea-82c9-d2ffa3bbafcf>	ns1:repository	"https://hub.docker.com/r/bde2020/ember-swarm-ui-frontend/" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/1e8586ea-ec45-47ea-82c9-d2ffa3bbafcf>	ns1:dockerText	"  ember-swarm-ui-frontend:\n    image: bde2020/ember-swarm-ui-frontend" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/1e8586ea-ec45-47ea-82c9-d2ffa3bbafcf>	ns1:dockerText	"    ember-swarm-ui-frontend:\n      image: bde2020/ember-swarm-ui-frontend" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1e8586ea-ec45-47ea-82c9-d2ffa3bbafcf>	ns2:uuid	"1e8586ea-ec45-47ea-82c9-d2ffa3bbafcf" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1e8586ea-ec45-47ea-82c9-d2ffa3bbafcf>	ns3:title	"bde2020/ember-swarm-ui-frontend" .
 
@@ -122,321 +122,321 @@
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/b61ef85c-cdbe-422c-b3e5-30fbe4d2020f>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/b61ef85c-cdbe-422c-b3e5-30fbe4d2020f>	ns1:repository	"https://hub.docker.com/r/bde2020/integrator-ui" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/b61ef85c-cdbe-422c-b3e5-30fbe4d2020f>	ns1:dockerText	"  integrator-ui:\n    image: bde2020/integrator-ui" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/b61ef85c-cdbe-422c-b3e5-30fbe4d2020f>	ns1:dockerText	"    integrator-ui:\n      image: bde2020/integrator-ui" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/b61ef85c-cdbe-422c-b3e5-30fbe4d2020f>	ns2:uuid	"b61ef85c-cdbe-422c-b3e5-30fbe4d2020f" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/b61ef85c-cdbe-422c-b3e5-30fbe4d2020f>	ns3:title	"bde2020/integrator-ui" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/d3450233-d492-48f4-9552-594d5d27ecbb>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d3450233-d492-48f4-9552-594d5d27ecbb>	ns1:repository	"https://hub.docker.com/r/bde2020/demo-spark-sensor-data" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/d3450233-d492-48f4-9552-594d5d27ecbb>	ns1:dockerText	"  demo-spark-sensor-data:\n    image: bde2020/demo-spark-sensor-data" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/d3450233-d492-48f4-9552-594d5d27ecbb>	ns1:dockerText	"    demo-spark-sensor-data:\n      image: bde2020/demo-spark-sensor-data" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d3450233-d492-48f4-9552-594d5d27ecbb>	ns2:uuid	"d3450233-d492-48f4-9552-594d5d27ecbb" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d3450233-d492-48f4-9552-594d5d27ecbb>	ns3:title	"bde2020/demo-spark-sensor-data" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/9b98d039-a1b2-49e0-b2c6-d4e5e94f9bd0>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/9b98d039-a1b2-49e0-b2c6-d4e5e94f9bd0>	ns1:repository	"https://hub.docker.com/r/bde2020/sextant" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/9b98d039-a1b2-49e0-b2c6-d4e5e94f9bd0>	ns1:dockerText	"  sextant:\n    image: bde2020/sextant" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/9b98d039-a1b2-49e0-b2c6-d4e5e94f9bd0>	ns1:dockerText	"    sextant:\n      image: bde2020/sextant" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/9b98d039-a1b2-49e0-b2c6-d4e5e94f9bd0>	ns2:uuid	"9b98d039-a1b2-49e0-b2c6-d4e5e94f9bd0" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/9b98d039-a1b2-49e0-b2c6-d4e5e94f9bd0>	ns3:title	"bde2020/sextant" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/36b4a13d-185f-4231-86d9-fb7df7807520>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/36b4a13d-185f-4231-86d9-fb7df7807520>	ns1:repository	"https://hub.docker.com/r/bde2020/flink-base" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/36b4a13d-185f-4231-86d9-fb7df7807520>	ns1:dockerText	"  flink-base:\n    image: bde2020/flink-base" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/36b4a13d-185f-4231-86d9-fb7df7807520>	ns1:dockerText	"    flink-base:\n      image: bde2020/flink-base" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/36b4a13d-185f-4231-86d9-fb7df7807520>	ns2:uuid	"36b4a13d-185f-4231-86d9-fb7df7807520" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/36b4a13d-185f-4231-86d9-fb7df7807520>	ns3:title	"bde2020/flink-base" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/dc408f66-b9ab-4814-a518-0429f34c8540>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/dc408f66-b9ab-4814-a518-0429f34c8540>	ns1:repository	"https://hub.docker.com/r/bde2020/pipeline-monitor-frontend" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/dc408f66-b9ab-4814-a518-0429f34c8540>	ns1:dockerText	"  pipeline-monitor-frontend:\n    image: bde2020/pipeline-monitor-frontend" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/dc408f66-b9ab-4814-a518-0429f34c8540>	ns1:dockerText	"    pipeline-monitor-frontend:\n      image: bde2020/pipeline-monitor-frontend" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/dc408f66-b9ab-4814-a518-0429f34c8540>	ns2:uuid	"dc408f66-b9ab-4814-a518-0429f34c8540" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/dc408f66-b9ab-4814-a518-0429f34c8540>	ns3:title	"bde2020/pipeline-monitor-frontend" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/abc314ca-920d-439d-a6b9-3a0a0c8d8599>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/abc314ca-920d-439d-a6b9-3a0a0c8d8599>	ns1:repository	"https://hub.docker.com/r/bde2020/cassandra" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/abc314ca-920d-439d-a6b9-3a0a0c8d8599>	ns1:dockerText	"  cassandra:\n    image: bde2020/cassandra" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/abc314ca-920d-439d-a6b9-3a0a0c8d8599>	ns1:dockerText	"    cassandra:\n      image: bde2020/cassandra" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/abc314ca-920d-439d-a6b9-3a0a0c8d8599>	ns2:uuid	"abc314ca-920d-439d-a6b9-3a0a0c8d8599" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/abc314ca-920d-439d-a6b9-3a0a0c8d8599>	ns3:title	"bde2020/cassandra" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/8ec6c37f-ab2b-4652-8353-9b5d88793f3e>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/8ec6c37f-ab2b-4652-8353-9b5d88793f3e>	ns1:repository	"https://hub.docker.com/r/bde2020/mu-pipeline-service" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/8ec6c37f-ab2b-4652-8353-9b5d88793f3e>	ns1:dockerText	"  mu-pipeline-service:\n    image: bde2020/mu-pipeline-service" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/8ec6c37f-ab2b-4652-8353-9b5d88793f3e>	ns1:dockerText	"    mu-pipeline-service:\n      image: bde2020/mu-pipeline-service" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/8ec6c37f-ab2b-4652-8353-9b5d88793f3e>	ns2:uuid	"8ec6c37f-ab2b-4652-8353-9b5d88793f3e" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/8ec6c37f-ab2b-4652-8353-9b5d88793f3e>	ns3:title	"bde2020/mu-pipeline-service" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/32b3352c-447b-4a9e-9026-7ec163ba22ad>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/32b3352c-447b-4a9e-9026-7ec163ba22ad>	ns1:repository	"https://hub.docker.com/r/bde2020/mu-init-daemon-service" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/32b3352c-447b-4a9e-9026-7ec163ba22ad>	ns1:dockerText	"  mu-init-daemon-service:\n    image: bde2020/mu-init-daemon-service" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/32b3352c-447b-4a9e-9026-7ec163ba22ad>	ns1:dockerText	"    mu-init-daemon-service:\n      image: bde2020/mu-init-daemon-service" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/32b3352c-447b-4a9e-9026-7ec163ba22ad>	ns2:uuid	"32b3352c-447b-4a9e-9026-7ec163ba22ad" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/32b3352c-447b-4a9e-9026-7ec163ba22ad>	ns3:title	"bde2020/mu-init-daemon-service" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/d2f47a9d-0ddc-476f-968e-ea09a785902f>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d2f47a9d-0ddc-476f-968e-ea09a785902f>	ns1:repository	"https://hub.docker.com/r/bde2020/flink-submit" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/d2f47a9d-0ddc-476f-968e-ea09a785902f>	ns1:dockerText	"  flink-submit:\n    image: bde2020/flink-submit" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/d2f47a9d-0ddc-476f-968e-ea09a785902f>	ns1:dockerText	"    flink-submit:\n      image: bde2020/flink-submit" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d2f47a9d-0ddc-476f-968e-ea09a785902f>	ns2:uuid	"d2f47a9d-0ddc-476f-968e-ea09a785902f" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d2f47a9d-0ddc-476f-968e-ea09a785902f>	ns3:title	"bde2020/flink-submit" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/ae550e34-ec4e-42da-9fea-af25844eb9a1>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/ae550e34-ec4e-42da-9fea-af25844eb9a1>	ns1:repository	"https://hub.docker.com/r/bde2020/4store" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/ae550e34-ec4e-42da-9fea-af25844eb9a1>	ns1:dockerText	"  4store:\n    image: bde2020/4store" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/ae550e34-ec4e-42da-9fea-af25844eb9a1>	ns1:dockerText	"    4store:\n      image: bde2020/4store" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/ae550e34-ec4e-42da-9fea-af25844eb9a1>	ns2:uuid	"ae550e34-ec4e-42da-9fea-af25844eb9a1" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/ae550e34-ec4e-42da-9fea-af25844eb9a1>	ns3:title	"bde2020/4store" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/a5aa7ac9-c7ba-4a3a-9bab-1da37686226b>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/a5aa7ac9-c7ba-4a3a-9bab-1da37686226b>	ns1:repository	"https://hub.docker.com/r/bde2020/nginx-proxy-with-css" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/a5aa7ac9-c7ba-4a3a-9bab-1da37686226b>	ns1:dockerText	"  nginx-proxy-with-css:\n    image: bde2020/nginx-proxy-with-css" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/a5aa7ac9-c7ba-4a3a-9bab-1da37686226b>	ns1:dockerText	"    nginx-proxy-with-css:\n      image: bde2020/nginx-proxy-with-css" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/a5aa7ac9-c7ba-4a3a-9bab-1da37686226b>	ns2:uuid	"a5aa7ac9-c7ba-4a3a-9bab-1da37686226b" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/a5aa7ac9-c7ba-4a3a-9bab-1da37686226b>	ns3:title	"bde2020/nginx-proxy-with-css" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/999dcbe0-7262-4040-a0a6-e7bce4b6369b>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/999dcbe0-7262-4040-a0a6-e7bce4b6369b>	ns1:repository	"https://hub.docker.com/r/bde2020/strabon" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/999dcbe0-7262-4040-a0a6-e7bce4b6369b>	ns1:dockerText	"  strabon:\n    image: bde2020/strabon" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/999dcbe0-7262-4040-a0a6-e7bce4b6369b>	ns1:dockerText	"    strabon:\n      image: bde2020/strabon" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/999dcbe0-7262-4040-a0a6-e7bce4b6369b>	ns2:uuid	"999dcbe0-7262-4040-a0a6-e7bce4b6369b" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/999dcbe0-7262-4040-a0a6-e7bce4b6369b>	ns3:title	"bde2020/strabon" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/5dcac375-608c-44ef-8902-3131bb833287>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/5dcac375-608c-44ef-8902-3131bb833287>	ns1:repository	"https://hub.docker.com/r/bde2020/event-detection" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/5dcac375-608c-44ef-8902-3131bb833287>	ns1:dockerText	"  event-detection:\n    image: bde2020/event-detection" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/5dcac375-608c-44ef-8902-3131bb833287>	ns1:dockerText	"    event-detection:\n      image: bde2020/event-detection" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/5dcac375-608c-44ef-8902-3131bb833287>	ns2:uuid	"5dcac375-608c-44ef-8902-3131bb833287" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/5dcac375-608c-44ef-8902-3131bb833287>	ns3:title	"bde2020/event-detection" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/0713c02d-85aa-42b2-8a70-de48b3678a08>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/0713c02d-85aa-42b2-8a70-de48b3678a08>	ns1:repository	"https://hub.docker.com/r/bde2020/mu-swarm-admin-service" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/0713c02d-85aa-42b2-8a70-de48b3678a08>	ns1:dockerText	"  mu-swarm-admin-service:\n    image: bde2020/mu-swarm-admin-service" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/0713c02d-85aa-42b2-8a70-de48b3678a08>	ns1:dockerText	"    mu-swarm-admin-service:\n      image: bde2020/mu-swarm-admin-service" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/0713c02d-85aa-42b2-8a70-de48b3678a08>	ns2:uuid	"0713c02d-85aa-42b2-8a70-de48b3678a08" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/0713c02d-85aa-42b2-8a70-de48b3678a08>	ns3:title	"bde2020/mu-swarm-admin-service" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/7ab82b87-efe9-482c-b3e0-09709b8f435f>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/7ab82b87-efe9-482c-b3e0-09709b8f435f>	ns1:repository	"https://hub.docker.com/r/bde2020/pipeline-builder-frontend" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/7ab82b87-efe9-482c-b3e0-09709b8f435f>	ns1:dockerText	"  pipeline-builder-frontend:\n    image: bde2020/pipeline-builder-frontend" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/7ab82b87-efe9-482c-b3e0-09709b8f435f>	ns1:dockerText	"    pipeline-builder-frontend:\n      image: bde2020/pipeline-builder-frontend" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/7ab82b87-efe9-482c-b3e0-09709b8f435f>	ns2:uuid	"7ab82b87-efe9-482c-b3e0-09709b8f435f" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/7ab82b87-efe9-482c-b3e0-09709b8f435f>	ns3:title	"bde2020/pipeline-builder-frontend" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/b93342ac-f709-4349-8f4b-b88a339e45d8>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/b93342ac-f709-4349-8f4b-b88a339e45d8>	ns1:repository	"https://hub.docker.com/r/bde2020/postgis" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/b93342ac-f709-4349-8f4b-b88a339e45d8>	ns1:dockerText	"  postgis:\n    image: bde2020/postgis" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/b93342ac-f709-4349-8f4b-b88a339e45d8>	ns1:dockerText	"    postgis:\n      image: bde2020/postgis" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/b93342ac-f709-4349-8f4b-b88a339e45d8>	ns2:uuid	"b93342ac-f709-4349-8f4b-b88a339e45d8" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/b93342ac-f709-4349-8f4b-b88a339e45d8>	ns3:title	"bde2020/postgis" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/6ed70451-a771-4ae6-97bd-53b050539ce2>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/6ed70451-a771-4ae6-97bd-53b050539ce2>	ns1:repository	"https://hub.docker.com/r/bde2020/4store-master" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/6ed70451-a771-4ae6-97bd-53b050539ce2>	ns1:dockerText	"  4store-master:\n    image: bde2020/4store-master" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/6ed70451-a771-4ae6-97bd-53b050539ce2>	ns1:dockerText	"    4store-master:\n      image: bde2020/4store-master" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/6ed70451-a771-4ae6-97bd-53b050539ce2>	ns2:uuid	"6ed70451-a771-4ae6-97bd-53b050539ce2" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/6ed70451-a771-4ae6-97bd-53b050539ce2>	ns3:title	"bde2020/4store-master" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/95d07dcd-ebef-4f2d-81e0-b115d341e837>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/95d07dcd-ebef-4f2d-81e0-b115d341e837>	ns1:repository	"https://hub.docker.com/r/bde2020/geotriples-ws" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/95d07dcd-ebef-4f2d-81e0-b115d341e837>	ns1:dockerText	"  geotriples-ws:\n    image: bde2020/geotriples-ws" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/95d07dcd-ebef-4f2d-81e0-b115d341e837>	ns1:dockerText	"    geotriples-ws:\n      image: bde2020/geotriples-ws" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/95d07dcd-ebef-4f2d-81e0-b115d341e837>	ns2:uuid	"95d07dcd-ebef-4f2d-81e0-b115d341e837" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/95d07dcd-ebef-4f2d-81e0-b115d341e837>	ns3:title	"bde2020/geotriples-ws" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/30cee4a9-da0f-4a50-aa23-6e7cc2eda5c2>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/30cee4a9-da0f-4a50-aa23-6e7cc2eda5c2>	ns1:repository	"https://hub.docker.com/r/bde2020/aggregatordetector" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/30cee4a9-da0f-4a50-aa23-6e7cc2eda5c2>	ns1:dockerText	"  aggregatordetector:\n    image: bde2020/aggregatordetector" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/30cee4a9-da0f-4a50-aa23-6e7cc2eda5c2>	ns1:dockerText	"    aggregatordetector:\n      image: bde2020/aggregatordetector" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/30cee4a9-da0f-4a50-aa23-6e7cc2eda5c2>	ns2:uuid	"30cee4a9-da0f-4a50-aa23-6e7cc2eda5c2" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/30cee4a9-da0f-4a50-aa23-6e7cc2eda5c2>	ns3:title	"bde2020/aggregatordetector" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/94fd46ba-1a9a-48b7-81ab-c4e7a618464a>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/94fd46ba-1a9a-48b7-81ab-c4e7a618464a>	ns1:repository	"https://hub.docker.com/r/bde2020/mu-pipeline-export-service" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/94fd46ba-1a9a-48b7-81ab-c4e7a618464a>	ns1:dockerText	"  mu-pipeline-export-service:\n    image: bde2020/mu-pipeline-export-service" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/94fd46ba-1a9a-48b7-81ab-c4e7a618464a>	ns1:dockerText	"    mu-pipeline-export-service:\n      image: bde2020/mu-pipeline-export-service" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/94fd46ba-1a9a-48b7-81ab-c4e7a618464a>	ns2:uuid	"94fd46ba-1a9a-48b7-81ab-c4e7a618464a" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/94fd46ba-1a9a-48b7-81ab-c4e7a618464a>	ns3:title	"bde2020/mu-pipeline-export-service" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/1f68672c-d31b-4222-8b30-9d4f5747e393>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1f68672c-d31b-4222-8b30-9d4f5747e393>	ns1:repository	"https://hub.docker.com/r/bde2020/spark-python-template" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/1f68672c-d31b-4222-8b30-9d4f5747e393>	ns1:dockerText	"  spark-python-template:\n    image: bde2020/spark-python-template" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/1f68672c-d31b-4222-8b30-9d4f5747e393>	ns1:dockerText	"    spark-python-template:\n      image: bde2020/spark-python-template" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1f68672c-d31b-4222-8b30-9d4f5747e393>	ns2:uuid	"1f68672c-d31b-4222-8b30-9d4f5747e393" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1f68672c-d31b-4222-8b30-9d4f5747e393>	ns3:title	"bde2020/spark-python-template" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/8bd4b731-120e-464b-9b38-42daac8f83cc>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/8bd4b731-120e-464b-9b38-42daac8f83cc>	ns1:repository	"https://hub.docker.com/r/bde2020/logstash" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/8bd4b731-120e-464b-9b38-42daac8f83cc>	ns1:dockerText	"  logstash:\n    image: bde2020/logstash" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/8bd4b731-120e-464b-9b38-42daac8f83cc>	ns1:dockerText	"    logstash:\n      image: bde2020/logstash" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/8bd4b731-120e-464b-9b38-42daac8f83cc>	ns2:uuid	"8bd4b731-120e-464b-9b38-42daac8f83cc" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/8bd4b731-120e-464b-9b38-42daac8f83cc>	ns3:title	"bde2020/logstash" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/d40ee648-f2b8-42ae-9c5e-27cf4bb2271e>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d40ee648-f2b8-42ae-9c5e-27cf4bb2271e>	ns1:repository	"https://hub.docker.com/r/bde2020/pilot-sc7-spark-worker" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/d40ee648-f2b8-42ae-9c5e-27cf4bb2271e>	ns1:dockerText	"  pilot-sc7-spark-worker:\n    image: bde2020/pilot-sc7-spark-worker" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/d40ee648-f2b8-42ae-9c5e-27cf4bb2271e>	ns1:dockerText	"    pilot-sc7-spark-worker:\n      image: bde2020/pilot-sc7-spark-worker" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d40ee648-f2b8-42ae-9c5e-27cf4bb2271e>	ns2:uuid	"d40ee648-f2b8-42ae-9c5e-27cf4bb2271e" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d40ee648-f2b8-42ae-9c5e-27cf4bb2271e>	ns3:title	"bde2020/pilot-sc7-spark-worker" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/0dbbf2e7-3a0b-4ad6-ac0e-76888fdff0d8>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/0dbbf2e7-3a0b-4ad6-ac0e-76888fdff0d8>	ns1:repository	"https://hub.docker.com/r/bde2020/lookupservice" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/0dbbf2e7-3a0b-4ad6-ac0e-76888fdff0d8>	ns1:dockerText	"  lookupservice:\n    image: bde2020/lookupservice" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/0dbbf2e7-3a0b-4ad6-ac0e-76888fdff0d8>	ns1:dockerText	"    lookupservice:\n      image: bde2020/lookupservice" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/0dbbf2e7-3a0b-4ad6-ac0e-76888fdff0d8>	ns2:uuid	"0dbbf2e7-3a0b-4ad6-ac0e-76888fdff0d8" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/0dbbf2e7-3a0b-4ad6-ac0e-76888fdff0d8>	ns3:title	"bde2020/lookupservice" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/c392eeb6-b929-4f2a-a26c-b7a1a3ee4db1>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/c392eeb6-b929-4f2a-a26c-b7a1a3ee4db1>	ns1:repository	"https://hub.docker.com/r/bde2020/silk-workbench" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/c392eeb6-b929-4f2a-a26c-b7a1a3ee4db1>	ns1:dockerText	"  silk-workbench:\n    image: bde2020/silk-workbench" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/c392eeb6-b929-4f2a-a26c-b7a1a3ee4db1>	ns1:dockerText	"    silk-workbench:\n      image: bde2020/silk-workbench" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/c392eeb6-b929-4f2a-a26c-b7a1a3ee4db1>	ns2:uuid	"c392eeb6-b929-4f2a-a26c-b7a1a3ee4db1" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/c392eeb6-b929-4f2a-a26c-b7a1a3ee4db1>	ns3:title	"bde2020/silk-workbench" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/739d5fb0-300a-4e5e-be21-60f60ebe796b>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/739d5fb0-300a-4e5e-be21-60f60ebe796b>	ns1:repository	"https://hub.docker.com/r/bde2020/flume" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/739d5fb0-300a-4e5e-be21-60f60ebe796b>	ns1:dockerText	"  flume:\n    image: bde2020/flume" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/739d5fb0-300a-4e5e-be21-60f60ebe796b>	ns1:dockerText	"    flume:\n      image: bde2020/flume" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/739d5fb0-300a-4e5e-be21-60f60ebe796b>	ns2:uuid	"739d5fb0-300a-4e5e-be21-60f60ebe796b" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/739d5fb0-300a-4e5e-be21-60f60ebe796b>	ns3:title	"bde2020/flume" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/5d4b00c3-48b7-4bf4-a885-6837b0b8a804>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/5d4b00c3-48b7-4bf4-a885-6837b0b8a804>	ns1:repository	"https://hub.docker.com/r/bde2020/pilot-sc4-zookeeper" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/5d4b00c3-48b7-4bf4-a885-6837b0b8a804>	ns1:dockerText	"  pilot-sc4-zookeeper:\n    image: bde2020/pilot-sc4-zookeeper" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/5d4b00c3-48b7-4bf4-a885-6837b0b8a804>	ns1:dockerText	"    pilot-sc4-zookeeper:\n      image: bde2020/pilot-sc4-zookeeper" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/5d4b00c3-48b7-4bf4-a885-6837b0b8a804>	ns2:uuid	"5d4b00c3-48b7-4bf4-a885-6837b0b8a804" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/5d4b00c3-48b7-4bf4-a885-6837b0b8a804>	ns3:title	"bde2020/pilot-sc4-zookeeper" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/3d664cdf-a7b2-4d0c-89dc-f01210a6eb9c>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/3d664cdf-a7b2-4d0c-89dc-f01210a6eb9c>	ns1:repository	"https://hub.docker.com/r/bde2020/solr" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/3d664cdf-a7b2-4d0c-89dc-f01210a6eb9c>	ns1:dockerText	"  solr:\n    image: bde2020/solr" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/3d664cdf-a7b2-4d0c-89dc-f01210a6eb9c>	ns1:dockerText	"    solr:\n      image: bde2020/solr" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/3d664cdf-a7b2-4d0c-89dc-f01210a6eb9c>	ns2:uuid	"3d664cdf-a7b2-4d0c-89dc-f01210a6eb9c" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/3d664cdf-a7b2-4d0c-89dc-f01210a6eb9c>	ns3:title	"bde2020/solr" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/625c428b-32c2-45b1-8d67-21d2e1268af7>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/625c428b-32c2-45b1-8d67-21d2e1268af7>	ns1:repository	"https://hub.docker.com/r/bde2020/elasticsearch" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/625c428b-32c2-45b1-8d67-21d2e1268af7>	ns1:dockerText	"  elasticsearch:\n    image: bde2020/elasticsearch" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/625c428b-32c2-45b1-8d67-21d2e1268af7>	ns1:dockerText	"    elasticsearch:\n      image: bde2020/elasticsearch" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/625c428b-32c2-45b1-8d67-21d2e1268af7>	ns2:uuid	"625c428b-32c2-45b1-8d67-21d2e1268af7" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/625c428b-32c2-45b1-8d67-21d2e1268af7>	ns3:title	"bde2020/elasticsearch" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/fda4a409-cd88-4a66-8fd7-bfc4d5e0c88f>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/fda4a409-cd88-4a66-8fd7-bfc4d5e0c88f>	ns1:repository	"https://hub.docker.com/r/bde2020/mu-docker-compose-file-service" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/fda4a409-cd88-4a66-8fd7-bfc4d5e0c88f>	ns1:dockerText	"  mu-docker-compose-file-service:\n    image: bde2020/mu-docker-compose-file-service" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/fda4a409-cd88-4a66-8fd7-bfc4d5e0c88f>	ns1:dockerText	"    mu-docker-compose-file-service:\n      image: bde2020/mu-docker-compose-file-service" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/fda4a409-cd88-4a66-8fd7-bfc4d5e0c88f>	ns2:uuid	"fda4a409-cd88-4a66-8fd7-bfc4d5e0c88f" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/fda4a409-cd88-4a66-8fd7-bfc4d5e0c88f>	ns3:title	"bde2020/mu-docker-compose-file-service" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/a42d7f8f-6184-482f-a99c-1045db6dfee6>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/a42d7f8f-6184-482f-a99c-1045db6dfee6>	ns1:repository	"https://hub.docker.com/r/bde2020/pilot-sc4-fcd-consumer" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/a42d7f8f-6184-482f-a99c-1045db6dfee6>	ns1:dockerText	"  pilot-sc4-fcd-consumer:\n    image: bde2020/pilot-sc4-fcd-consumer" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/a42d7f8f-6184-482f-a99c-1045db6dfee6>	ns1:dockerText	"    pilot-sc4-fcd-consumer:\n      image: bde2020/pilot-sc4-fcd-consumer" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/a42d7f8f-6184-482f-a99c-1045db6dfee6>	ns2:uuid	"a42d7f8f-6184-482f-a99c-1045db6dfee6" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/a42d7f8f-6184-482f-a99c-1045db6dfee6>	ns3:title	"bde2020/pilot-sc4-fcd-consumer" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/3856bbc3-dcf5-477d-8305-f139d691edd8>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/3856bbc3-dcf5-477d-8305-f139d691edd8>	ns1:repository	"https://hub.docker.com/r/bde2020/sc4-zookeeper" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/3856bbc3-dcf5-477d-8305-f139d691edd8>	ns1:dockerText	"  sc4-zookeeper:\n    image: bde2020/sc4-zookeeper" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/3856bbc3-dcf5-477d-8305-f139d691edd8>	ns1:dockerText	"    sc4-zookeeper:\n      image: bde2020/sc4-zookeeper" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/3856bbc3-dcf5-477d-8305-f139d691edd8>	ns2:uuid	"3856bbc3-dcf5-477d-8305-f139d691edd8" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/3856bbc3-dcf5-477d-8305-f139d691edd8>	ns3:title	"bde2020/sc4-zookeeper" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/d428e585-ba0b-4ebf-a13b-97e354d312a6>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d428e585-ba0b-4ebf-a13b-97e354d312a6>	ns1:repository	"https://hub.docker.com/r/bde2020/ember-stack-builder-frontend" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/d428e585-ba0b-4ebf-a13b-97e354d312a6>	ns1:dockerText	"  ember-stack-builder-frontend:\n    image: bde2020/ember-stack-builder-frontend" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/d428e585-ba0b-4ebf-a13b-97e354d312a6>	ns1:dockerText	"    ember-stack-builder-frontend:\n      image: bde2020/ember-stack-builder-frontend" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d428e585-ba0b-4ebf-a13b-97e354d312a6>	ns2:uuid	"d428e585-ba0b-4ebf-a13b-97e354d312a6" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d428e585-ba0b-4ebf-a13b-97e354d312a6>	ns3:title	"bde2020/ember-stack-builder-frontend" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/58f67509-22c6-459a-bb03-e74b57e5b3ce>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/58f67509-22c6-459a-bb03-e74b57e5b3ce>	ns1:repository	"https://hub.docker.com/r/bde2020/sc4-kafka" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/58f67509-22c6-459a-bb03-e74b57e5b3ce>	ns1:dockerText	"  sc4-kafka:\n    image: bde2020/sc4-kafka" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/58f67509-22c6-459a-bb03-e74b57e5b3ce>	ns1:dockerText	"    sc4-kafka:\n      image: bde2020/sc4-kafka" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/58f67509-22c6-459a-bb03-e74b57e5b3ce>	ns2:uuid	"58f67509-22c6-459a-bb03-e74b57e5b3ce" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/58f67509-22c6-459a-bb03-e74b57e5b3ce>	ns3:title	"bde2020/sc4-kafka" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/97d4db62-e6af-46f1-9360-8bd446512737>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/97d4db62-e6af-46f1-9360-8bd446512737>	ns1:repository	"https://hub.docker.com/r/bde2020/kafka" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/97d4db62-e6af-46f1-9360-8bd446512737>	ns1:dockerText	"  kafka:\n    image: bde2020/kafka" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/97d4db62-e6af-46f1-9360-8bd446512737>	ns1:dockerText	"    kafka:\n      image: bde2020/kafka" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/97d4db62-e6af-46f1-9360-8bd446512737>	ns2:uuid	"97d4db62-e6af-46f1-9360-8bd446512737" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/97d4db62-e6af-46f1-9360-8bd446512737>	ns3:title	"bde2020/kafka" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/03109a5f-99c8-4a04-8647-36dc9ae79f94>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/03109a5f-99c8-4a04-8647-36dc9ae79f94>	ns1:repository	"https://hub.docker.com/r/bde2020/pilot-sc4-fcd-producer" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/03109a5f-99c8-4a04-8647-36dc9ae79f94>	ns1:dockerText	"  pilot-sc4-fcd-producer:\n    image: bde2020/pilot-sc4-fcd-producer" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/03109a5f-99c8-4a04-8647-36dc9ae79f94>	ns1:dockerText	"    pilot-sc4-fcd-producer:\n      image: bde2020/pilot-sc4-fcd-producer" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/03109a5f-99c8-4a04-8647-36dc9ae79f94>	ns2:uuid	"03109a5f-99c8-4a04-8647-36dc9ae79f94" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/03109a5f-99c8-4a04-8647-36dc9ae79f94>	ns3:title	"bde2020/pilot-sc4-fcd-producer" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/4dc27230-05f8-45bc-9189-e86b107b95c2>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/4dc27230-05f8-45bc-9189-e86b107b95c2>	ns1:repository	"https://hub.docker.com/r/bde2020/eventretrieve" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/4dc27230-05f8-45bc-9189-e86b107b95c2>	ns1:dockerText	"  eventretrieve:\n    image: bde2020/eventretrieve" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/4dc27230-05f8-45bc-9189-e86b107b95c2>	ns1:dockerText	"    eventretrieve:\n      image: bde2020/eventretrieve" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/4dc27230-05f8-45bc-9189-e86b107b95c2>	ns2:uuid	"4dc27230-05f8-45bc-9189-e86b107b95c2" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/4dc27230-05f8-45bc-9189-e86b107b95c2>	ns3:title	"bde2020/eventretrieve" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/96db240c-111e-42d1-936f-f1ea406679cf>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/96db240c-111e-42d1-936f-f1ea406679cf>	ns1:repository	"https://hub.docker.com/r/bde2020/postgis-sc7" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/96db240c-111e-42d1-936f-f1ea406679cf>	ns1:dockerText	"  postgis-sc7:\n    image: bde2020/postgis-sc7" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/96db240c-111e-42d1-936f-f1ea406679cf>	ns1:dockerText	"    postgis-sc7:\n      image: bde2020/postgis-sc7" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/96db240c-111e-42d1-936f-f1ea406679cf>	ns2:uuid	"96db240c-111e-42d1-936f-f1ea406679cf" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/96db240c-111e-42d1-936f-f1ea406679cf>	ns3:title	"bde2020/postgis-sc7" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/1c8b5acf-56a1-4d88-90fd-e8785ea5006b>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1c8b5acf-56a1-4d88-90fd-e8785ea5006b>	ns1:repository	"https://hub.docker.com/r/bde2020/sbt-template" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/1c8b5acf-56a1-4d88-90fd-e8785ea5006b>	ns1:dockerText	"  sbt-template:\n    image: bde2020/sbt-template" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/1c8b5acf-56a1-4d88-90fd-e8785ea5006b>	ns1:dockerText	"    sbt-template:\n      image: bde2020/sbt-template" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1c8b5acf-56a1-4d88-90fd-e8785ea5006b>	ns2:uuid	"1c8b5acf-56a1-4d88-90fd-e8785ea5006b" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/1c8b5acf-56a1-4d88-90fd-e8785ea5006b>	ns3:title	"bde2020/sbt-template" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/f2948535-d0f7-418b-a01d-9d15e9c588a5>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/f2948535-d0f7-418b-a01d-9d15e9c588a5>	ns1:repository	"https://hub.docker.com/r/bde2020/postgres" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/f2948535-d0f7-418b-a01d-9d15e9c588a5>	ns1:dockerText	"  postgres:\n    image: bde2020/postgres" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/f2948535-d0f7-418b-a01d-9d15e9c588a5>	ns1:dockerText	"    postgres:\n      image: bde2020/postgres" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/f2948535-d0f7-418b-a01d-9d15e9c588a5>	ns2:uuid	"f2948535-d0f7-418b-a01d-9d15e9c588a5" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/f2948535-d0f7-418b-a01d-9d15e9c588a5>	ns3:title	"bde2020/postgres" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/e224b851-4307-4f9f-9193-40e393aa8d7c>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/e224b851-4307-4f9f-9193-40e393aa8d7c>	ns1:repository	"https://hub.docker.com/r/bde2020/fox" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/e224b851-4307-4f9f-9193-40e393aa8d7c>	ns1:dockerText	"  fox:\n    image: bde2020/fox" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/e224b851-4307-4f9f-9193-40e393aa8d7c>	ns1:dockerText	"    fox:\n      image: bde2020/fox" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/e224b851-4307-4f9f-9193-40e393aa8d7c>	ns2:uuid	"e224b851-4307-4f9f-9193-40e393aa8d7c" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/e224b851-4307-4f9f-9193-40e393aa8d7c>	ns3:title	"bde2020/fox" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/cd7ccf35-4f2d-4e7d-878a-9b2157b03ca4>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/cd7ccf35-4f2d-4e7d-878a-9b2157b03ca4>	ns1:repository	"https://hub.docker.com/r/bde2020/pilot-sc4-kafka" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/cd7ccf35-4f2d-4e7d-878a-9b2157b03ca4>	ns1:dockerText	"  pilot-sc4-kafka:\n    image: bde2020/pilot-sc4-kafka" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/cd7ccf35-4f2d-4e7d-878a-9b2157b03ca4>	ns1:dockerText	"    pilot-sc4-kafka:\n      image: bde2020/pilot-sc4-kafka" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/cd7ccf35-4f2d-4e7d-878a-9b2157b03ca4>	ns2:uuid	"cd7ccf35-4f2d-4e7d-878a-9b2157b03ca4" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/cd7ccf35-4f2d-4e7d-878a-9b2157b03ca4>	ns3:title	"bde2020/pilot-sc4-kafka" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/5eeb2465-db1a-4d08-9126-73f35ca9fcc2>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/5eeb2465-db1a-4d08-9126-73f35ca9fcc2>	ns1:repository	"https://hub.docker.com/r/bde2020/sc6-zookeeper" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/5eeb2465-db1a-4d08-9126-73f35ca9fcc2>	ns1:dockerText	"  sc6-zookeeper:\n    image: bde2020/sc6-zookeeper" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/5eeb2465-db1a-4d08-9126-73f35ca9fcc2>	ns1:dockerText	"    sc6-zookeeper:\n      image: bde2020/sc6-zookeeper" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/5eeb2465-db1a-4d08-9126-73f35ca9fcc2>	ns2:uuid	"5eeb2465-db1a-4d08-9126-73f35ca9fcc2" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/5eeb2465-db1a-4d08-9126-73f35ca9fcc2>	ns3:title	"bde2020/sc6-zookeeper" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/caa64ddc-e3af-4897-af50-aca2ae572b56>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/caa64ddc-e3af-4897-af50-aca2ae572b56>	ns1:repository	"https://hub.docker.com/r/bde2020/sc6-flume" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/caa64ddc-e3af-4897-af50-aca2ae572b56>	ns1:dockerText	"  sc6-flume:\n    image: bde2020/sc6-flume" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/caa64ddc-e3af-4897-af50-aca2ae572b56>	ns1:dockerText	"    sc6-flume:\n      image: bde2020/sc6-flume" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/caa64ddc-e3af-4897-af50-aca2ae572b56>	ns2:uuid	"caa64ddc-e3af-4897-af50-aca2ae572b56" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/caa64ddc-e3af-4897-af50-aca2ae572b56>	ns3:title	"bde2020/sc6-flume" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/fad70d53-4866-40c9-a3e9-39bb808920a6>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/fad70d53-4866-40c9-a3e9-39bb808920a6>	ns1:repository	"https://hub.docker.com/r/bde2020/sc6-kafka" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/fad70d53-4866-40c9-a3e9-39bb808920a6>	ns1:dockerText	"  sc6-kafka:\n    image: bde2020/sc6-kafka" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/fad70d53-4866-40c9-a3e9-39bb808920a6>	ns1:dockerText	"    sc6-kafka:\n      image: bde2020/sc6-kafka" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/fad70d53-4866-40c9-a3e9-39bb808920a6>	ns2:uuid	"fad70d53-4866-40c9-a3e9-39bb808920a6" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/fad70d53-4866-40c9-a3e9-39bb808920a6>	ns3:title	"bde2020/sc6-kafka" .
 
 
 <http://stack-builder.big-data-europe.eu/resources/container-items/d59a857f-80d0-418e-905d-9acdeadbe9db>	rdf:type	ns1:ContainerItem .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d59a857f-80d0-418e-905d-9acdeadbe9db>	ns1:repository	"https://hub.docker.com/r/bde2020/sc6-spark-submit" .
-<http://stack-builder.big-data-europe.eu/resources/container-items/d59a857f-80d0-418e-905d-9acdeadbe9db>	ns1:dockerText	"  sc6-spark-submit:\n    image: bde2020/sc6-spark-submit" .
+<http://stack-builder.big-data-europe.eu/resources/container-items/d59a857f-80d0-418e-905d-9acdeadbe9db>	ns1:dockerText	"    sc6-spark-submit:\n      image: bde2020/sc6-spark-submit" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d59a857f-80d0-418e-905d-9acdeadbe9db>	ns2:uuid	"d59a857f-80d0-418e-905d-9acdeadbe9db" .
 <http://stack-builder.big-data-europe.eu/resources/container-items/d59a857f-80d0-418e-905d-9acdeadbe9db>	ns3:title	"bde2020/sc6-spark-submit" .

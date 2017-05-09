@@ -25,6 +25,15 @@
       "base-url": "http://localhost:13339/",
       "append-path": ""
     }
+  },
+  {
+    "id": 4,
+    "type": "user-interfaces",
+    "attributes": {
+      "label": "NetLog",
+      "base-url": "http://localhost:5601/",
+      "append-path": ""
+    }
   }
 ]
 }
