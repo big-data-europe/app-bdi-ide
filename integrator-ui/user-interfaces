@@ -12,7 +12,7 @@
     "id": 2,
     "type": "user-interfaces",
     "attributes": {
-      "label": "Pipeline Builder",
+      "label": "Workflow Builder",
       "base-url": "http://localhost:13338/",
       "append-path": ""
     }
