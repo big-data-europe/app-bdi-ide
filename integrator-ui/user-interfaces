@@ -4,7 +4,7 @@
     "type": "user-interfaces",
     "attributes": {
       "label": "Stack Builder",
-      "base-url": "http://localhost:13337/",
+      "base-url": "http://stack-builder.big-data-europe.aksw.org/",
       "append-path": ""
     }
   },
@@ -13,7 +13,7 @@
     "type": "user-interfaces",
     "attributes": {
       "label": "Workflow Builder",
-      "base-url": "http://localhost:13338/",
+      "base-url": "http://workflow-builder.big-data-europe.aksw.org/",
       "append-path": ""
     }
   },
@@ -22,7 +22,7 @@
     "type": "user-interfaces",
     "attributes": {
       "label": "Swarm UI",
-      "base-url": "http://localhost:13339/",
+      "base-url": "http://swarm-ui.big-data-europe.aksw.org/",
       "append-path": ""
     }
   },
@@ -31,7 +31,7 @@
     "type": "user-interfaces",
     "attributes": {
       "label": "NetLog",
-      "base-url": "http://localhost:5601/",
+      "base-url": "http://kibana.big-data-europe.aksw.org/",
       "append-path": ""
     }
   }
