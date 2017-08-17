@@ -47,18 +47,6 @@ services:
       VIRTUAL_HOST: "swarm-ui.big-data-europe.aksw.org"
       VIRTUAL_PORT: "80"
 
-  kibana:
-    image: kibana:4
-    links:
-      - csswrapper
-      - elasticsearch:elasticsearch
-    expose:
-      - "5601"
-    environment:
-      ELASTICSEARCH_URL: "http://elasticsearch:9200"
-      VIRTUAL_HOST: "kibana.big-data-europe.aksw.org"
-      VIRTUAL_PORT: "5601"
-
   identifier:
     image: semtech/mu-identifier:1.2.0
     links:
@@ -115,7 +103,7 @@ services:
       - /data/:/data/
 
   swarm-logger:
-    build: ./mu-swarm-logger-service
+    image: bde2020/mu-swarm-logger-service
     links:
       - database:database
     volumes:
@@ -129,19 +117,18 @@ services:
       - ./data/docker:/var/lib/docker
 
   event-query:
-    build: ./mu-docker-event-query
+    image: bde2020/mu-event-query-service
     links:
       - database:database
     volumes:
       - ./containers:/usr/src/app/containers/
-      - ./mu-docker-event-query/src:/app/
     environment:
       SLEEP_PERIOD: '10'
 
   docker-watcher:
-    build: ./mu-docker-watcher
+    image: bde2020/mu-docker-watcher-service
     volumes:
-      - ./mu-docker-watcher/supervisord.conf:/etc/supervisord.conf
+      - ./config/supervisord/supervisord.conf:/etc/supervisord.conf
       - ./containers:/app/containers
       - ./pcap:/app/pcap/
     network_mode: host
@@ -149,16 +136,29 @@ services:
       PCAP_READ_DIR: '/pcap'
 
   har-transformation:
-    build: ./mu-har-transformation
+    image: bde2020/mu-har-transformation-service
     volumes:
       - ./pcap:/app/pcap
       - ./har:/app/har
       - ./containers:/app/containers
+      - ./backups:/app/backups
     links:
       - elasticsearch:elasticsearch
+    environment:
+      BU_DIR: "/app/backups"
 
   elasticsearch:
-    image: elasticsearch:2
-    command: elasticsearch -Des.network.host=0.0.0.0
+    image: elasticsearch:5.5.0
+    command: elasticsearch -E network.host=0.0.0.0
     ports:
       - "9200:9200"
+  kibana:
+    image: kibana:5.5
+    ports:
+      - "5601:5601"
+    environment:
+      ELASTICSEARCH_URL: "http://elasticsearch:9200"
+      VIRTUAL_HOST: "kibana.big-data-europe.aksw.org"
+      VIRTUAL_PORT: "5601"
+    links:
+      - elasticsearch:elasticsearch
