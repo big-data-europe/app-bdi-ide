@@ -37,7 +37,7 @@ services:
       VIRTUAL_PORT: "80"
 
   swarm-ui:
-    image: bde2020/ember-swarm-ui-frontend:0.4.3
+    image: bde2020/ember-swarm-ui-frontend:0.6.0
     links:
       - csswrapper
       - identifier:backend
@@ -46,19 +46,31 @@ services:
     environment:
       VIRTUAL_HOST: "swarm-ui.big-data-europe.aksw.org"
       VIRTUAL_PORT: "80"
+    volumes:
+      - ./config/frontend/swarm-ui:/etc/nginx/conf.d
 
   identifier:
-    image: semtech/mu-identifier:1.2.0
+    image: semtech/mu-identifier:latest
     links:
       - dispatcher:dispatcher
-      - swarm:swarm-admin
 
   dispatcher:
-    image: semtech/mu-dispatcher:1.1.0
+    image: semtech/mu-dispatcher
     links:
       - resource:resource
+      - swarm-admin:swarm-admin
     volumes:
       - ./config/dispatcher:/config
+
+  delta:
+    image: semtech/mu-delta-service:latest
+    links:
+      - database:database
+    environment:
+      - CONFIGFILE=/config/config.properties
+      - SUBSCRIBERSFILE=/config/subscribers.json
+    volumes:
+      - ./config/delta:/config
 
   database:
     image: tenforce/virtuoso:1.1.0-virtuoso7.2.4
@@ -68,11 +80,13 @@ services:
     volumes:
       - ./data/db:/data
       - ./config/toLoad:/data/toLoad
+    ports:
+      - "8890:8890"
 
   resource:
-    image: semtech/mu-cl-resources:1.11.0
+    image: semtech/mu-cl-resources:1.15.0
     links:
-      - database:database
+      - delta:database
     volumes:
       - ./config/resources:/config
 
@@ -90,31 +104,23 @@ services:
   export:
     image: bde2020/mu-pipeline-export-service:0.1.0
 
-  swarm:
-    image: bde2020/mu-swarm-admin-service:0.2.0
-    environment:
-      - DOCKER_HOST=tcp://docker:2375
-      - ENV=dev
-    links:
-      - database:database
-      - docker:docker
+  swarm-admin:
+    image: bde2020/mu-swarm-admin-service:latest
+    depends_on:
+      - delta
     volumes:
-      - /run/:/run/
-      - /data/:/data/
+      - ./data/swarm-admin:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      MU_SPARQL_ENDPOINT: "http://delta:8890/sparql"
 
   swarm-logger:
-    image: bde2020/mu-swarm-logger-service
+    image: bde2020/mu-swarm-logger-service:latest
     links:
       - database:database
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     command: /src/run.py --debug sparql
-
-  docker:
-    image: docker:dind
-    privileged: true
-    volumes:
-      - ./data/docker:/var/lib/docker
 
   event-query:
     image: bde2020/mu-event-query-service
