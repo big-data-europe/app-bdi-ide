@@ -37,7 +37,7 @@ services:
       VIRTUAL_PORT: "80"
 
   swarm-ui:
-    image: bde2020/ember-swarm-ui-frontend:0.6.0
+    image: bde2020/ember-swarm-ui-frontend:0.7.0
     links:
       - csswrapper
       - identifier:backend
