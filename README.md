@@ -19,7 +19,7 @@ The basic application to start from is constituted of several components:
 Systems are organized following a microservices architecture and run together using a docker-compose script, some of them sharing microserviecs common to all architectures, like the *identifier*, *dispatcher*, or *resource*. This is a more visual representation of the basic architecture:
 
 
-`TODO: ADD architecture overview`
+  ![bdi-arch.png](bdi-arch.png)
 
 
 # Installation & Usage
