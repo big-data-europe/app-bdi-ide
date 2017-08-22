@@ -26,3 +26,6 @@
 <http://swarmui.semte.ch/vocabularies/core/Error> dct:title "error";
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swarmui.semte.ch/vocabularies/core/Status>;
     mu:uuid "B22EE9C5-F3C1-423B-A383-B3ADCC802736".
+<http://swarmui.semte.ch/vocabularies/core/Initializing> dct:title "initializing";
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swarmui.semte.ch/vocabularies/core/Status>;
+    mu:uuid "3754B003-0746-434C-8976-B3DC2C5D49E2".
