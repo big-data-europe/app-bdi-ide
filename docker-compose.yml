@@ -15,7 +15,7 @@ services:
       VIRTUAL_HOST: "integrator-ui.big-data-europe.aksw.org"
 
   stack-builder:
-    image: bde2020/ember-stack-builder-frontend:0.3.2
+    image: bde2020/ember-stack-builder-frontend:0.3.3
     links:
       - csswrapper
       - identifier:backend
