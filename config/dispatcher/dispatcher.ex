@@ -68,6 +68,10 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/services/"
   end
 
+  match "/stacks/*path" do
+    Proxy.forward conn, path, "http://resource/stacks/"
+  end
+
   match "/statuses/*path" do
     Proxy.forward conn, path, "http://resource/statuses/"
   end

@@ -86,6 +86,19 @@
   :resource-base (s-url "http://swarm-ui.big-data-europe.eu/resources/services/")
   :on-path "services")
 
+(define-resource stack ()
+  :class (s-prefix "doap:Stack")
+  :properties `((:title :string ,(s-prefix "dct:title"))
+                (:icon :string ,(s-prefix "w3vocab:icon")))
+  :has-many `((pipeline-instance :via ,(s-prefix "swarmui:pipelines")
+                                 :as "pipeline-instances"))
+  :has-one `((docker-compose :via ,(s-prefix "swarmui:dockerComposeFile")
+                                :as "docker-file"))
+  :resource-base (s-url "http://swarm-ui.big-data-europe.eu/resources/stacks/")
+  :on-path "stacks")
+
+
+
 (define-resource status ()
   :class (s-prefix "swarmui:Status")
   :properties `((:title :string ,(s-prefix "dct:title")))
