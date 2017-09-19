@@ -40,6 +40,10 @@
   :resource-base (s-url "http://stack-builder.big-data-europe.eu/resources/container-relations/")
   :on-path "container-relations")
 
+
+
+
+
 ;;; Swarm UI
 
 (define-resource repository ()
@@ -57,10 +61,14 @@
   :class (s-prefix "swarmui:Pipeline")
   :properties `((:title :string ,(s-prefix "dct:title"))
                 (:icon :string ,(s-prefix "w3vocab:icon"))
-                (:restart-requested :string ,(s-prefix "swarmui:restartRequested")))
+                (:restart-requested :string ,(s-prefix "swarmui:restartRequested"))
+                (:update-requested :string ,(s-prefix "swarmui:updateRequested")))
   :has-one `((repository :via ,(s-prefix "swarmui:pipelines")
                          :inverse t
                          :as "repository")
+             (stack :via ,(s-prefix "swarmui:pipelines")
+                                    :inverse t
+                                    :as "stack")
              (status :via ,(s-prefix "swarmui:status")
                      :as "status")
              (status :via ,(s-prefix "swarmui:requestedStatus")
@@ -96,8 +104,6 @@
                                 :as "docker-file"))
   :resource-base (s-url "http://swarm-ui.big-data-europe.eu/resources/stacks/")
   :on-path "stacks")
-
-
 
 (define-resource status ()
   :class (s-prefix "swarmui:Status")
