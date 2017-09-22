@@ -56,10 +56,6 @@ defmodule Dispatcher do
   # Swarm UI #
   ############
 
-  match "/repositories/*path" do
-    Proxy.forward conn, path, "http://resource/repositories/"
-  end
-
   match "/pipeline-instances/*path" do
     Proxy.forward conn, path, "http://resource/pipeline-instances/"
   end

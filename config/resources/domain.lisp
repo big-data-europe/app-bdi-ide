@@ -42,20 +42,7 @@
 
 
 
-
-
 ;;; Swarm UI
-
-(define-resource repository ()
-  :class (s-prefix "doap:GitRepository")
-  :properties `((:location :string ,(s-prefix "doap:location"))
-                (:title :string ,(s-prefix "dct:title"))
-                (:icon :string ,(s-prefix "w3vocab:icon"))
-                (:branch :string ,(s-prefix "swarmui:branch")))
-  :has-many `((pipeline-instance :via ,(s-prefix "swarmui:pipelines")
-                                 :as "pipeline-instances"))
-  :resource-base (s-url "http://swarm-ui.big-data-europe.eu/resources/repositories/")
-  :on-path "repositories")
 
 (define-resource pipeline-instance ()
   :class (s-prefix "swarmui:Pipeline")
@@ -63,10 +50,7 @@
                 (:icon :string ,(s-prefix "w3vocab:icon"))
                 (:restart-requested :string ,(s-prefix "swarmui:restartRequested"))
                 (:update-requested :string ,(s-prefix "swarmui:updateRequested")))
-  :has-one `((repository :via ,(s-prefix "swarmui:pipelines")
-                         :inverse t
-                         :as "repository")
-             (stack :via ,(s-prefix "swarmui:pipelines")
+  :has-one `((stack :via ,(s-prefix "swarmui:pipelines")
                                     :inverse t
                                     :as "stack")
              (status :via ,(s-prefix "swarmui:status")
@@ -97,6 +81,7 @@
 (define-resource stack ()
   :class (s-prefix "doap:Stack")
   :properties `((:title :string ,(s-prefix "dct:title"))
+                (:location :string ,(s-prefix "doap:location"))
                 (:icon :string ,(s-prefix "w3vocab:icon")))
   :has-many `((pipeline-instance :via ,(s-prefix "swarmui:pipelines")
                                  :as "pipeline-instances"))
