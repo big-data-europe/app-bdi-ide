@@ -76,6 +76,10 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://swarm/"
   end
 
+  match "/drchandler/*path" do
+    Proxy.forward conn, path, "http://drc-handler/"
+  end
+
   match _ do
     send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )
   end
