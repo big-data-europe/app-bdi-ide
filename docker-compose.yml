@@ -32,7 +32,7 @@ services:
       - ./config/dispatcher:/config
 
   delta:
-    image: semtech/mu-delta-service:latest
+    image: semtech/mu-delta-service:beta-0.10
     links:
       - database:database
     environment:
