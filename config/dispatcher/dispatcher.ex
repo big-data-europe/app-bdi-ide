@@ -41,11 +41,11 @@ defmodule Dispatcher do
   ####################
 
   match "/pipelines/*path" do
-    Proxy.forward conn, path, "http://pipeline/pipelines/"
+    Proxy.forward conn, path, "http://resource/pipelines/"
   end
 
   match "/steps/*path" do
-    Proxy.forward conn, path, "http://pipeline/steps/"
+    Proxy.forward conn, path, "http://resource/steps/"
   end
 
   match "/export/*path" do
