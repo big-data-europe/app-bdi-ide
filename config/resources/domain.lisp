@@ -30,6 +30,9 @@
   :class (s-prefix "stackbuilder:DockerCompose")
   :properties `((:text :string ,(s-prefix "stackbuilder:text"))
                 (:title :string ,(s-prefix "dct:title")))
+  :has-many `((stack :via ,(s-prefix "swarmui:dockerComposeFile")
+                              :inverse t
+                              :as "related-stacks"))
   :resource-base (s-url "http://stack-builder.big-data-europe.eu/resources/docker-composes/")
   :on-path "docker-composes")
 
