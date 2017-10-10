@@ -7,6 +7,8 @@
   :resource-base (s-url "http://www.big-data-europe.eu/data/workflows/")
   :properties `((:title :string ,(s-prefix "dcterms:title"))
                 (:description :string ,(s-prefix "dcterms:description")))
+  :has-one `((docker-compose :via ,(s-prefix "pwo:dockerComposeFile")
+                              :as "docker-file"))
   :has-many `((step :via ,(s-prefix "pwo:hasStep")
                     :as "steps"))
   :on-path "pipelines")
@@ -32,7 +34,11 @@
                 (:title :string ,(s-prefix "dct:title")))
   :has-many `((stack :via ,(s-prefix "swarmui:dockerComposeFile")
                               :inverse t
-                              :as "related-stacks"))
+                              :as "related-stacks")
+              (pipeline :via ,(s-prefix "pwo:dockerComposeFile")
+                              :inverse t
+                              :as "related-workflows")
+                              )
   :resource-base (s-url "http://stack-builder.big-data-europe.eu/resources/docker-composes/")
   :on-path "docker-composes")
 
