@@ -28,6 +28,7 @@ services:
     links:
       - resource:resource
       - swarm-admin:swarm-admin
+      - drc-handler:drc-handler
     volumes:
       - ./config/dispatcher:/config
 
@@ -35,6 +36,7 @@ services:
     image: semtech/mu-delta-service:beta-0.10
     links:
       - database:database
+      - drc-handler:drc-handler
     environment:
       - CONFIGFILE=/config/config.properties
       - SUBSCRIBERSFILE=/config/subscribers.json
@@ -90,6 +92,13 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     command: /src/run.py --debug sparql
+
+  drc-handler:
+    image: bde2020/mu-docker-compose-handler:latest
+    depends_on:
+      - database
+    links:
+      - database:database
 
   event-query:
     image: bde2020/mu-event-query-service

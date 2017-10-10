@@ -3,5 +3,6 @@
     "http://swarm-admin/update"
   ],
   "effectives": [
+    "http://drc-handler/update"
   ]
 }
