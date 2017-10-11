@@ -32,12 +32,14 @@
   :class (s-prefix "stackbuilder:DockerCompose")
   :properties `((:text :string ,(s-prefix "stackbuilder:text"))
                 (:title :string ,(s-prefix "dct:title")))
+  :has-one `((pipeline :via ,(s-prefix "pwo:dockerComposeFile")
+                              :inverse t
+                              :as "related-workflows")
+                              )
   :has-many `((stack :via ,(s-prefix "swarmui:dockerComposeFile")
                               :inverse t
                               :as "related-stacks")
-              (pipeline :via ,(s-prefix "pwo:dockerComposeFile")
-                              :inverse t
-                              :as "related-workflows")
+              
                               )
   :resource-base (s-url "http://stack-builder.big-data-europe.eu/resources/docker-composes/")
   :on-path "docker-composes")
