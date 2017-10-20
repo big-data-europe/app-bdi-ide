@@ -8,7 +8,7 @@ services:
       -  /var/run/docker.sock:/tmp/docker.sock:ro
 
   integrator-ui:
-    image: bde2020/integrator-ui:1.4.0
+    image: bde2020/integrator-ui:1.5.0
     links:
       - csswrapper
       - identifier:backend
@@ -76,12 +76,14 @@ services:
     image: bde2020/mu-pipeline-export-service:0.1.0
 
   swarm-admin:
-    image: bde2020/mu-swarm-admin-service:latest
+    # image: bde2020/mu-swarm-admin-service:latest
+    build: ../mu-swarm-admin-service
     depends_on:
       - delta
     volumes:
       - ./data/swarm-admin:/data
       - /var/run/docker.sock:/var/run/docker.sock
+      - ../mu-swarm-admin-service/:/src
     environment:
       MU_SPARQL_ENDPOINT: "http://delta:8890/sparql"
 
