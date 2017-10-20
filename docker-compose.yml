@@ -76,14 +76,12 @@ services:
     image: bde2020/mu-pipeline-export-service:0.1.0
 
   swarm-admin:
-    # image: bde2020/mu-swarm-admin-service:latest
-    build: ../mu-swarm-admin-service
+    image: bde2020/mu-swarm-admin-service:latest
     depends_on:
       - delta
     volumes:
       - ./data/swarm-admin:/data
       - /var/run/docker.sock:/var/run/docker.sock
-      - ../mu-swarm-admin-service/:/src
     environment:
       MU_SPARQL_ENDPOINT: "http://delta:8890/sparql"
 
