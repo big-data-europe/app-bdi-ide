@@ -34,6 +34,8 @@ services:
 
   delta:
     image: semtech/mu-delta-service:beta-0.10
+    depends_on:
+      - database
     links:
       - database:database
       - drc-handler:drc-handler
