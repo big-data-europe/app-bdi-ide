@@ -113,3 +113,10 @@ Some remarks:
   * **engine**: it is set to true to specify this frontend piece is an engine.
   * **repo-name**: this is a little tricky. This name must match the name you use in the **router.js** file of your application, for it to create a link that matches with the name of the engine.
   * **base-url**: for engines it *must* be empty for the engines.
+
+# NOTES:
+
+There is a random startup error on **swarm-admin** that is on Work In Progress and will prevent users form working with the project. This happens because of the delta forwarding a call to a database that is not yet available. 
+
+	* If `drc ps` shows swarm-admin exited or `drc logs swarm-admin` shows an exception, that is the problem.
+	* `drc up -d swarm-admin` will boot up the service once the database has been fully loaded.
