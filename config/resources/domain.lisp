@@ -21,10 +21,51 @@
 		(:code :string ,(s-prefix "pip:code"))
                 (:order :number ,(s-prefix "pip:order"))
                 (:status :string ,(s-prefix "pip:status")))
-  :has-one `((pipeline :via ,(s-prefix "pwo:hasStep")
-                       :inverse t
-                       :as "pipeline"))
+  :has-one `(
+              (pipeline :via ,(s-prefix "pwo:hasStep")
+                :inverse t
+                :as "pipeline")
+              (docker-service :via ,(s-prefix "tmp:linked-to-service")
+                :as "service")
+            )
   :on-path "steps")
+
+(define-resource docker-service ()
+  :class (s-prefix "tmp:DockerService")
+  :resource-base (s-url "http://mu.semte.ch/vocabularies/temporary/docker-services/")
+  :properties `((:name :string,(s-prefix "tmp:name")))
+  :has-one `(
+              (docker-compose :via ,(s-prefix "tmp:hasService")
+                :inverse t
+                :as "docker-file")
+              (step :via ,(s-prefix "tmp:linked-to-service")
+                :inverse t
+                :as "step")
+            )
+  :has-many `(
+              (docker-service :via ,(s-prefix "tmp:depends_on")
+                :as "depends-on")
+              (docker-service :via ,(s-prefix "tmp:depends_on")
+                :inverse t
+                :as "depended-on-by")
+              (environment-variable :via ,(s-prefix "tmp:has_environment_variable")
+                :as "environment-variables")
+            )
+  :on-path "docker-services")
+
+(define-resource environment-variable ()
+  :class (s-prefix "tmp:EnvironmentVariable")
+  :resource-base (s-url "http://mu.semte.ch/vocabularies/temporary/environment-variables/")
+  :properties `(
+                (:key :string,(s-prefix "tmp:key"))
+                (:value :string,(s-prefix "tmp:value"))
+              )
+  :has-one `(
+              (docker-service :via ,(s-prefix "tmp:has_environment_variable")
+                :inverse t
+                :as "docker-service")
+            )
+  :on-path "environment-variables")
 
 ;;; Stack Builder
 
@@ -39,8 +80,9 @@
   :has-many `((stack :via ,(s-prefix "swarmui:dockerComposeFile")
                               :inverse t
                               :as "related-stacks")
-              
-                              )
+              (docker-service :via ,(s-prefix "tmp:hasService")
+                :as "docker-services")
+              )
   :resource-base (s-url "http://stack-builder.big-data-europe.eu/resources/docker-composes/")
   :on-path "docker-composes")
 

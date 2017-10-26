@@ -1,0 +1,3 @@
+[submodule "initdaemon"]
+	path = initdaemon
+	url = git@github.com:big-data-europe/mu-init-daemon-service.git

@@ -40,6 +40,14 @@ defmodule Dispatcher do
   # Pipeline Builder #
   ####################
 
+  match "/environment-variables/*path" do
+    Proxy.forward conn, path, "http://resource/environment-variables/"
+  end
+
+  match "/docker-services/*path" do
+    Proxy.forward conn, path, "http://resource/docker-services/"
+  end
+
   match "/pipelines/*path" do
     Proxy.forward conn, path, "http://resource/pipelines/"
   end
