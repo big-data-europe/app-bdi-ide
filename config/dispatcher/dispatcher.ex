@@ -76,8 +76,8 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://swarm/"
   end
 
-  match "/drchandler/*path" do
-    Proxy.forward conn, path, "http://drc-handler/"
+  match "/swarm-ui/drcstats/*path" do
+    Proxy.forward conn, path, "http://drc-stats/"
   end
 
   match _ do
