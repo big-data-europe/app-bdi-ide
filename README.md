@@ -33,7 +33,7 @@ Systems are organized following a microservices architecture and run together us
   sudo ./scripts/install.sh
   ```
   * `docker-compose up -d` will run the services together.
-  * Visit `integrator-ui.big-data-europe.aksw.org` to access the application's entry point.
+  * Visit http://integrator-ui.big-data-europe.aksw.org to access the application's entry point.
 
 
 # How to add new services (Iframe)
