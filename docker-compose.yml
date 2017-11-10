@@ -76,14 +76,15 @@ services:
     image: bde2020/mu-pipeline-export-service:0.1.0
 
   swarm-admin:
-    image: bde2020/mu-swarm-admin-service:1.0.0
+    image: bde2020/mu-swarm-admin-service:voume-fix
     depends_on:
       - delta
     volumes:
-      - ./data/swarm-admin:/data
+      - ./data:/home/langens-jonathan/projects/big data europe/app-bdi-ide/data
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       MU_SPARQL_ENDPOINT: "http://delta:8890/sparql"
+      real_path: PWD
 
   swarm-logger:
     image: bde2020/mu-swarm-logger-service:latest
