@@ -22,6 +22,8 @@ services:
     image: semtech/mu-identifier:latest
     links:
       - dispatcher:dispatcher
+    ports:
+      - 1234
 
   dispatcher:
     image: semtech/mu-dispatcher
@@ -101,7 +103,9 @@ services:
       - database:database
 
   drc-stats:
-    image: bde2020/mu-docker-stats
+    build: ../mu-docker-stats
+    volumes:
+      - ../mu-docker-stats:/src
     depends_on:
       - database
     links:
