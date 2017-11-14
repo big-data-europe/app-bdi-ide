@@ -76,7 +76,7 @@ services:
     image: bde2020/mu-pipeline-export-service:0.1.0
 
   swarm-admin:
-    image: bde2020/mu-swarm-admin-service:voume-fix
+    image: bde2020/mu-swarm-admin-service:1.0.1
     depends_on:
       - delta
     volumes:
