@@ -80,7 +80,7 @@ services:
     depends_on:
       - delta
     volumes:
-      - ./data:/home/langens-jonathan/projects/big data europe/app-bdi-ide/data
+      - ./data:UNESCAPED_PWD/data
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       MU_SPARQL_ENDPOINT: "http://delta:8890/sparql"

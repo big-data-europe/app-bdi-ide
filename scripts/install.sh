@@ -7,6 +7,8 @@ echo "installing the BDE Big Data Integrator"
 echo "setting current path in swarm-admin configuration..."
 current_directory=`pwd`
 current_directory_no_spaces="${current_directory//\ /\\\\\\\ }"
+
+sed -i -e "s|UNESCAPED_PWD|$current_directory|g" docker-compose.yml
 sed -i -e "s|PWD|\"$current_directory_no_spaces\"|g" docker-compose.yml
 
 # Setting the hostnames
