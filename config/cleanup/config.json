@@ -1,0 +1,23 @@
+{
+    "queries": {
+        "docker-stats": [
+            "DELETE { ?s ?p ?o . } WHERE { { SELECT (?stats as ?s) WHERE { ?stats a <http://swarmui.semte.ch/vocabularies/core/Stats> . ?stats <http://swarmui.semte.ch/vocabularies/core/read> ?readtime . BIND(NOW() AS ?limit) FILTER(ABS(?readtime - ?limit) > 900) } } ?s ?p ?o . }",
+            "DELETE { ?s ?p ?o . } WHERE { ?s a <http://swarmui.semte.ch/vocabularies/core/CpuStats> . FILTER NOT EXISTS { ?any ?rel ?s . } ?s ?p ?o . }",
+            "DELETE { ?s ?p ?o . } WHERE { ?s a <http://swarmui.semte.ch/vocabularies/core/PrecpuStats> . FILTER NOT EXISTS { ?any ?rel ?s . } ?s ?p ?o . }",
+            "DELETE { ?s ?p ?o . } WHERE { ?s a <http://swarmui.semte.ch/vocabularies/core/MemoryStats> . FILTER NOT EXISTS { ?any ?rel ?s . } ?s ?p ?o . }",
+            "DELETE { ?s ?p ?o . } WHERE { ?s a <http://swarmui.semte.ch/vocabularies/core/CpuUsage> . FILTER NOT EXISTS { ?any ?rel ?s . } ?s ?p ?o . }",
+            "DELETE { ?s ?p ?o . } WHERE { ?s a <http://swarmui.semte.ch/vocabularies/core/ThrottlingData> . FILTER NOT EXISTS { ?any ?rel ?s . } ?s ?p ?o . }",
+            "DELETE { ?s ?p ?o . } WHERE { ?s a <http://swarmui.semte.ch/vocabularies/core/StatsInMemory> . FILTER NOT EXISTS { ?any ?rel ?s . } ?s ?p ?o . }"
+        ],
+        "leftover-stats": [
+            "DELETE { ?s ?p ?o . } WHERE { { SELECT (?stats as ?s) WHERE { ?stats a <http://swarmui.semte.ch/vocabularies/core/Stats> . ?stats <http://swarmui.semte.ch/vocabularies/core/read> ?readtime . BIND(NOW() AS ?limit) FILTER(ABS(?readtime - ?limit) > 900) } LIMIT 15000 } ?s ?p ?o . }",
+            "DELETE { ?s ?p ?o . } WHERE { { SELECT ?s WHERE { ?s a <http://swarmui.semte.ch/vocabularies/core/CpuStats> . FILTER NOT EXISTS { ?any ?rel ?s . } } LIMIT 15000 } ?s ?p ?o . }",
+            "DELETE { ?s ?p ?o . } WHERE { { SELECT ?s WHERE { ?s a <http://swarmui.semte.ch/vocabularies/core/PrecpuStats> . FILTER NOT EXISTS { ?any ?rel ?s . } } LIMIT 15000 } ?s ?p ?o . }",
+            "DELETE { ?s ?p ?o . } WHERE { { SELECT ?s WHERE { ?s a <http://swarmui.semte.ch/vocabularies/core/MemoryStats> . FILTER NOT EXISTS { ?any ?rel ?s . } } LIMIT 15000 } ?s ?p ?o . }",
+            "DELETE { ?s ?p ?o . } WHERE { { SELECT ?s WHERE { ?s a <http://swarmui.semte.ch/vocabularies/core/CpuUsage> . FILTER NOT EXISTS { ?any ?rel ?s . } } LIMIT 15000 } ?s ?p ?o . }",
+            "DELETE { ?s ?p ?o . } WHERE { { SELECT ?s WHERE { ?s a <http://swarmui.semte.ch/vocabularies/core/ThrottlingData> . FILTER NOT EXISTS { ?any ?rel ?s . } } LIMIT 15000 } ?s ?p ?o . }",
+            "DELETE { ?s ?p ?o . } WHERE { { SELECT ?s WHERE { ?s a <http://swarmui.semte.ch/vocabularies/core/StatsInMemory> . FILTER NOT EXISTS { ?any ?rel ?s . } } LIMIT 15000 } ?s ?p ?o . }"
+        ]
+    },
+    "prefixes" : ["DEFINE sql:log-enable 3", "PREFIX mu: <http://mu.semte.ch/vocabularies/core/>"]
+}

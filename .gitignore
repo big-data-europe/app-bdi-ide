@@ -5,3 +5,5 @@ har/
 pcap/
 backups/
 node_modules/
+.idea
+

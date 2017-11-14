@@ -29,6 +29,7 @@ services:
       - resource:resource
       - swarm-admin:swarm-admin
       - drc-handler:drc-handler
+      - cleanup:cleanup
     volumes:
       - ./config/dispatcher:/config
 
@@ -154,3 +155,24 @@ services:
       VIRTUAL_PORT: "5601"
     links:
       - elasticsearch:elasticsearch
+
+  cleanup:
+    image: bde2020/ruby-cleanup
+    volumes:
+      - "./config/cleanup:/config"
+    links:
+      - database:database
+    environment:
+      MU_SPARQL_TIMEOUT: 240
+
+  scheduler:
+    image: bde2020/java-scheduler
+    links:
+      - dispatcher:dispatcher
+    volumes:
+      - ./config/scheduler:/config
+    environment:
+      BASE_URL: "http://dispatcher"
+    depends_on:
+      - database
+      - cleanup

@@ -12,6 +12,10 @@ defmodule Dispatcher do
   plug :match
   plug :dispatch
 
+  match "/cleanup/*path" do
+    Proxy.forward conn, path, "http://cleanup/"
+  end
+
   #################
   # Stack Builder #
   #################
