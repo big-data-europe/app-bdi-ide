@@ -28,10 +28,12 @@ Systems are organized following a microservices architecture and run together us
 # Installation & Usage
 
   * Clone the repository
-  * Per each one of the subsystems (stack builder, http logger, etc..) used, check their repository's README for it may be some small quirks to take into account before running each piece.
-  * Run the **edit-hosts.sh** script. This is to assign url's to the different services in the integrator.
-  * `docker-compose up` will run the services together.
-  * Visit `integrator-ui.big-data-europe.aksw.org` to access the application's entry point.
+  * from the root cloned directory run
+  ```
+  sudo ./scripts/install.sh
+  ```
+  * `docker-compose up -d` will run the services together.
+  * Visit http://integrator-ui.big-data-europe.aksw.org to access the application's entry point.
 
 
 # How to add new services (Iframe)
