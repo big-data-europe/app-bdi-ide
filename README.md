@@ -118,6 +118,15 @@ Some remarks:
 
 # NOTES:
 
+Every microservice whose stats are logged generates 74 triples every 2-3 seconds, as such, it is necessary to clean up the database regularly. To do that, the cleanup & scheduler services have been added.
+The scheduler is programmed to call a cleanup task every 15 minutes and a 'deep' cleanup task every 5 minutes at 2AM (in order to ensure the stats have been cleaned).
+This behavior is modifiable in **config/scheduler/jobs.conf**.
+The cleanup services run queries when called by the scheduler. By default, they will clean any stats (and associated resources) older than 15 minutes and this means, as the scheduler runs every 15 minutes by default, that you should not have logged stats older than 30 minutes.
+The cleanup queries are modifiable in **config/cleanup/config.json**.
+
+Do note that the queries executed by the **swarm-logger** and the **cleanup-service** have a configuration to ignore Virtuoso's transaction level which might prevent other graph stores to work with the current setup.
+To fix this, you would need to ensure that the **swarm-logger** is no longer using a custom version of the **aiosparql** library and remove the "DEFINE sql:log-enable 3" from the "prefixes" array in **config/cleanup/config.json**.
+
 There is a random startup error on **swarm-admin** that is on Work In Progress and will prevent users form working with the project. This happens because of the delta forwarding a call to a database that is not yet available. 
 
 	* If `drc ps` shows swarm-admin exited or `drc logs swarm-admin` shows an exception, that is the problem.
