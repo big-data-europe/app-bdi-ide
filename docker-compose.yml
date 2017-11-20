@@ -88,7 +88,7 @@ services:
       real_path: PWD
 
   swarm-logger:
-    image: bde2020/mu-swarm-logger-service:latest
+    image: bde2020/mu-swarm-logger-service:1.0.1
     links:
       - database:database
     volumes:
@@ -143,8 +143,11 @@ services:
   elasticsearch:
     image: elasticsearch:2.4.6
     command: elasticsearch -D network.host=0.0.0.0
+    environment:
+      ES_HEAP_SIZE: '2g'
     ports:
       - "9200:9200"
+      
   kibana:
     image: kibana:4.6
     ports:
