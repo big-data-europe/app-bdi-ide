@@ -103,7 +103,7 @@ services:
       - database:database
 
   drc-stats:
-    image: bde2020/mu-docker-stats:1.0.1
+    image: bde2020/mu-docker-stats:1.1.0
     depends_on:
       - database
     links:
