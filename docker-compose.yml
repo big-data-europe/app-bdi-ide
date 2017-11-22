@@ -88,7 +88,7 @@ services:
       real_path: PWD
 
   swarm-logger:
-    image: bde2020/mu-swarm-logger-service:1.0.1
+    image: bde2020/mu-swarm-logger-service:1.1.0
     links:
       - database:database
     volumes:
