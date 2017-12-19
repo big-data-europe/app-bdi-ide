@@ -185,3 +185,5 @@ services:
     image: bde2020/mu-init-daemon-service:0.3.1
     links:
       - database:database
+    hostname: initdaemon
+    container_name: initdaemon
