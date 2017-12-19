@@ -16,6 +16,11 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://cleanup/"
   end
 
+
+  match "/initdaemon/*path" do
+    Proxy.forward conn, path, "http://initdaemon/"
+  end
+
   #################
   # Stack Builder #
   #################

@@ -3,6 +3,7 @@
     "http://swarm-admin/update"
   ],
   "effectives": [
-    "http://drc-handler/update"
+    "http://drc-handler/update",
+    "http://initdaemon/process_delta"
   ]
 }

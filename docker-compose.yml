@@ -30,11 +30,12 @@ services:
       - swarm-admin:swarm-admin
       - drc-handler:drc-handler
       - cleanup:cleanup
+      - initdaemon:initdaemon
     volumes:
       - ./config/dispatcher:/config
 
   delta:
-    image: semtech/mu-delta-service:beta-0.10
+    image: semtech/mu-delta-service:latest
     links:
       - database:database
       - drc-handler:drc-handler
@@ -90,7 +91,7 @@ services:
   swarm-logger:
     image: bde2020/mu-swarm-logger-service:1.2.0
     links:
-      - database:database
+      - delta:database
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     command: /src/run.py --debug sparql
@@ -179,3 +180,8 @@ services:
     depends_on:
       - database
       - cleanup
+
+  initdaemon:
+    image: bde2020/mu-init-daemon-service:0.3.1
+    links:
+      - database:database
