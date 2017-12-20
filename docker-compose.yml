@@ -187,3 +187,9 @@ services:
       - database:database
     hostname: initdaemon
     container_name: initdaemon
+    networks:
+      - default
+      - initdaemon
+
+networks:
+  initdaemon:
