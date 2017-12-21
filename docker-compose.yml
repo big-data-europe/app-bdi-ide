@@ -8,7 +8,7 @@ services:
       -  /var/run/docker.sock:/tmp/docker.sock:ro
 
   integrator-ui:
-    image: bde2020/integrator-ui:1.8.5
+    image: bde2020/integrator-ui:1.8.6
     links:
       - csswrapper
       - identifier:backend
