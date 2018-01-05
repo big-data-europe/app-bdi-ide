@@ -142,15 +142,12 @@ services:
       BU_DIR: "/app/backups"
 
   elasticsearch:
-    image: elasticsearch:2.4.6
-    command: elasticsearch -D network.host=0.0.0.0
-    environment:
-      ES_HEAP_SIZE: '2g'
+    image: elasticsearch:5.5
     ports:
       - "9200:9200"
-      
+
   kibana:
-    image: kibana:4.6
+    image: asjongers/configured-kibana:5.5
     ports:
       - "5601:5601"
     environment:
@@ -159,6 +156,8 @@ services:
       VIRTUAL_PORT: "5601"
     links:
       - elasticsearch:elasticsearch
+    volumes:
+      - "./config/kibana:/usr/share/kibana/config"
 
   cleanup:
     image: bde2020/ruby-cleanup
