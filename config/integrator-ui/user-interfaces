@@ -25,6 +25,17 @@
     "id": 3,
     "type": "user-interfaces",
     "attributes": {
+      "engine": true,
+      "repo-name": "ember-pipeline-monitor-engine.pipelines",
+      "label": "Workflow Monitor",
+      "base-url": "",
+      "append-path": ""
+    }
+    },
+  {
+    "id": 4,
+    "type": "user-interfaces",
+    "attributes": {
 
       "engine": true,
       "repo-name": "ember-swarm-ui-engine",
@@ -34,7 +45,7 @@
     }
   },
   {
-    "id": 4,
+    "id": 5,
     "type": "user-interfaces",
     "attributes": {
       "engine": false,

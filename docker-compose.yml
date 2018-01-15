@@ -8,7 +8,7 @@ services:
       -  /var/run/docker.sock:/tmp/docker.sock:ro
 
   integrator-ui:
-    image: bde2020/integrator-ui:1.8.8
+    image: bde2020/integrator-ui:1.8.9
     links:
       - csswrapper
       - identifier:backend
@@ -16,6 +16,7 @@ services:
       VIRTUAL_HOST: "integrator-ui.big-data-europe.aksw.org"
     volumes:
       - ./config/integrator-ui:/app/config
+      - ./config/integrator-ui/user-interfaces:/app/user-interfaces
       - ./config/integrator-ui/nginx:/etc/nginx/conf.d
 
   identifier:
