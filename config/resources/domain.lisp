@@ -101,7 +101,7 @@
   :class (s-prefix "swarmui:Service")
   :properties `((:name :string ,(s-prefix "dct:title"))
                 (:scaling :number ,(s-prefix "swarmui:scaling"))
-                (:requested-scaling :number ,(s-prefix "swarmui:requestedScaling"))
+                (:scaling-requested :string ,(s-prefix "swarmui:scalingRequested"))
                 (:restart-requested :string ,(s-prefix "swarmui:restartRequested")))
   :has-one `((pipeline-instance :via ,(s-prefix "swarmui:services")
                                 :inverse t
